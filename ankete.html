@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ankete</title>
+    <link rel="stylesheet" href="css/ankete.css" />
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!--  za pie chart -->
+  </head>
+  <body>
+    <header>
+      <div class="anketa-title">
+        <h1><b>Did Ivanovi dvori - </b>Ankete</h1>
+        <nav class="main-nav">
+          <a href="index.html">Početna</a>
+          <a href="blog.html">Blog</a>
+          <a href="projekti.html">Projekti</a>
+          <a href="pravo.html">Pravni akti</a>
+        </nav>
+      </div>
+      <div class="active">
+        <a href="survey.html" class="nova-anketa"
+          ><span>🟢</span> Ispuni anketu!</a
+        >
+      </div>
+    </header>
+
+    <main class="container">
+      <aside id="ankete-lista">
+        <h3>Popis anketa</h3>
+        <ul id="ankete"></ul>
+      </aside>
+
+      <section class="rezultati">
+        <br />
+        <div id="trenutna-anketa">
+          <h2 id="naslov-ankete"></h2>
+          <br />
+          <div id="rezultati-ankete"></div>
+          <canvas id="pieChart" width="300" height="300"></canvas>
+        </div>
+      </section>
+      <section class="analiza-rezultata">
+        <div class="analiza-container">
+          <br />
+
+          <h2>📊 Analiza od <span id="datum-analize"></span></h2>
+          <br />
+          <div class="ljudska-analiza">
+            <p>
+              <em
+                >"Kroz moje, konzervativno-seljačke naočale, ovi rezultati
+                pokazuju..."</em
+              >
+            </p>
+            <!-- Ovdje tekst ručno -->
+            <p>Trendovi ukazuju na [].</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="js/fb-ankete.js"></script>
+    <footer class="footer-simple">
+      <p>
+        <img src="grafike/irs-logo2.png" alt="logo" />
+        &copy; 2025 Inicijativa za revitalizaciju hrvatskog sela
+      </p>
+    </footer>
+  </body>
+</html>

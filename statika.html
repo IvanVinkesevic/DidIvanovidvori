@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="ivan-vinkesevic" />
+    <link rel="stylesheet" href="css/galerija-style.css" />
+    <link rel="icon" type="image/ico" href="icons/favicon.ico" />
+    <title>Galerija 1 - statika</title>
+  </head>
+  <body>
+    <header>
+      <div class="naslov">
+        <h1>Galerija 1</h1>
+        <h2>Statika - sanacija temelja i zidova</h2>
+      </div>
+      <div id="navbar">
+        <nav class="navigacija">
+          <a href="index.html">Početna</a>
+          <a href="krov.html" id="radovi">Krovište</a>
+          <a href="voda.html">Voda</a>
+          <a href="kanalizacija.html">Odvod</a>
+          <a href="struja.html">Struja</a>
+          <a href="zidanje.html">Zidanje</a>
+          <a href="zbukanje.html">Žbukanje</a>
+          <a href="okolis.html">Okoliš</a>
+        </nav>
+      </div>
+    </header>
+    <!-- <main> -->
+    <div class="gallery">
+      <div class="video-wrapper">
+        <video class="video" controls>
+          <source src="statika/video-1.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay">
+          <p>Korijenje oraha narušilo je statiku cijele kuće</p>
+        </div>
+      </div>
+      <img src="statika/slika-1.jpg" data-full="statika/slika-1.jpg" />
+      <img src="statika/slika-2.jpg" data-full="statika/slika-2.jpg" />
+      <img src="statika/slika-3.jpg" data-full="statika/slika-3.jpg" />
+      <img src="statika/slika-4.jpg" data-full="statika/slika-4.jpg" />
+      <img src="statika/slika-5.jpg" data-full="statika/slika-5.jpg" />
+      <div class="video-wrapper">
+        <video class="video" controls>
+          <source src="statika/video-2.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay">
+          <p>Prije sanacije temelja čupamo korijenje</p>
+        </div>
+      </div>
+      <img src="statika/slika-6.jpg" data-full="statika/slika-6.jpg" />
+      <img src="statika/slika-7.jpg" data-full="statika/slika-7.jpg" />
+      <div class="video-wrapper">
+        <video class="video" controls>
+          <source src="okolis/video-1.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay">
+          <p>Prije sanacije temelja čupamo korijenje</p>
+        </div>
+      </div>
+      <div class="video-wrapper">
+        <video class="video" controls>
+          <source src="okolis/video-1.mp4" type="video/mp4" />
+        </video>
+        <div class="video-overlay">
+          <p>Prije sanacije temelja čupamo korijenje</p>
+        </div>
+      </div>
+      <img src="statika/slika-8.jpg" data-full="statika/slika-8.jpg" />
+      <img src="statika/slika-9.jpg" data-full="statika/slika-9.jpg" />
+      <img src="statika/slika-10.jpg" data-full="statika/slika-10.jpg" />
+      <img src="statika/slika-11.jpg" data-full="statika/slika-11.jpg" />
+      <img src="statika/slika-12.jpg" data-full="statika/slika-12.jpg" />
+      <a class="back" href="#">Povratak na vrh</a>
+    </div>
+    <!-- Lightbox container -->
+    <div class="lightbox" id="lightbox">
+      <img id="lightbox-img" src="" />
+    </div>
+
+    <footer>
+      <div class="odjava">
+        <h5>Kontaktirajte autora:</h5>
+        <p>
+          WhatsApp:
+          <a href="tel:+385913900416">+385913900416</a> &nbsp;&nbsp;&nbsp;
+          <br />e-mail:
+          <a href="mailto:didivanovidvori@outlook.com? subject=Poruka"
+            >didivanovidvori@outlook.com
+          </a>
+        </p>
+      </div>
+      <div id="copyright">
+        &copy;2025 &nbsp;<img
+          class="ES"
+          src="logo/El-shockac-logo-2.png"
+          alt="ES"
+          width="20px"
+        />
+        Sva prava pridržana
+      </div>
+      <div class="right">
+        <img src="grafike/irs-logo2.png" alt="logo" />
+      </div>
+    </footer>
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      document.querySelectorAll(".gallery img").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.getAttribute("data-full");
+          lightbox.style.display = "flex";
+        });
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+      lightbox.classList.add("show");
+    </script>
+  </body>
+</html>

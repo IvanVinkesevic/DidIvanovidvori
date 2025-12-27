@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Chewy&display=swap");
+
+:root {
+  --color-1: #a66d18;
+  --color-2: #e2dfd9;
+  --color-3: #c5a16b;
+  --color-4: #f7f1f1;
+  --color-5: #755d38;
+  --color-6: #333;
+  --font-h: "Caveat", sans-serif;
+  --font-t: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-t);
+  background: var(--color-2);
+  color: var(--color-6);
+  line-height: 1.4;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 0;
+  background: url("../grafike/kucica.png") no-repeat top 5px left,
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 15%,
+      rgba(0, 0, 0, 0.8) 30%,
+      rgba(197, 135, 42, 0.55) 45%,
+      rgba(75, 52, 18, 0.75) 70%,
+      rgba(0, 0, 0, 1) 90%
+    ),
+    url("../grafike/cigle.png") no-repeat center center;
+  background-size: 15rem 12rem, auto, cover;
+  color: var(--color-2);
+  z-index: 10;
+  border: 3px solid var(--color-1);
+}
+.title {
+  flex: 1;
+  min-width: 50%;
+  text-align: center;
+}
+.title h1 {
+  font-family: var(--font-h);
+  font-size: clamp(3.2rem, 5vw, 5rem);
+  font-weight: bold;
+}
+.title p {
+  font-family: var(--font-h);
+  font-style: italic;
+  font-size: clamp(1.6rem, 2.5vw, 2.5rem);
+}
+
+.desno {
+  display: flex;
+  max-width: 50%;
+  padding-right: 2rem;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+.desno p {
+  font-family: var(--font-h);
+  font-size: 1.6rem;
+  padding-right: 2rem;
+}
+/* NAV */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  margin-right: 1rem;
+}
+.nav a {
+  font-size: 1.8rem;
+  font-family: var(--font-h);
+  color: var(--color-2);
+  text-decoration: none;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.6rem;
+  box-shadow: 5px 3px 5px 3px rgba(156, 128, 88, 0.7);
+}
+.nav a:hover {
+  background: var(--color-3);
+}
+
+/* ============================= */
+/* STRANICA: DONACIJE MATERIJALA*/
+/* ============================= */
+.materijal-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  flex: 1;
+  position: relative;
+  padding: 1rem 0;
+  margin-top: 11rem;
+  text-align: center;
+  width: 100%;
+}
+
+.materijal-main h2 {
+  margin: 2rem auto 1rem;
+  color: var(--color-2);
+  font-size: 3rem;
+  font-family: var(--font-h);
+  color: var(--color-6);
+}
+
+.materijal-main p {
+  font-size: 1.6rem;
+  font-style: italic;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.materijal-forma {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.materijal-forma p {
+  font-size: 1.6rem;
+}
+.general {
+  display: flex;
+  flex-direction: column;
+  align-items: space-around;
+  background-color: #f9f9f9;
+  border: 2px solid var(--color-3);
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 40%;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+#foot {
+  background: url("../grafike/kucica.png") no-repeat top 5px left,
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 15%,
+      rgba(0, 0, 0, 0.8) 30%,
+      rgba(197, 135, 42, 0.55) 45%,
+      rgba(75, 52, 18, 0.75) 70%,
+      rgba(0, 0, 0, 1) 90%
+    ),
+    url("../grafike/cigle.png") no-repeat center center;
+  background-size: 5rem 4rem, auto, cover;
+  font-family: var(--font-h);
+  color: var(--color-4);
+  box-shadow: 0 0 0 2px red, 0 0 0 4px white, 0 0 0 6px blue;
+  opacity: 0.4;
+  margin-bottom: 2rem;
+}
+h3 {
+  font-size: 1.8rem;
+}
+#logo img {
+  width: 25%;
+}
+input [type="checkbox"] {
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+label {
+  display: inline;
+  font-size: 1.4rem;
+}
+.specific {
+  display: flex;
+  flex-direction: column;
+  background-color: #f9f9f9;
+  border: 2px solid var(--color-3);
+  border-radius: 15px;
+  width: 40%;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+fieldset {
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  padding: 8px;
+}
+legend {
+  padding: 0 6px;
+}
+input {
+  border: none;
+  outline: none;
+}
+input:not([type="checkbox"]) {
+  width: 60%;
+}
+.materijal-forma legend {
+  font-weight: 600;
+  font-size: 1.6rem;
+  padding: 0 6px;
+}
+.materijal-forma input,
+.materijal-forma select,
+.materijal-forma textarea {
+  font-size: 1.6rem;
+  padding: 0.6rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin: 0.2rem auto;
+}
+
+.materijal-forma textarea {
+  width: 80%;
+}
+.form-submit {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+.form-btn {
+  align-self: center;
+  padding: 0.8rem 2rem;
+  background: #2d6a4f;
+  color: white;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.form-btn:hover {
+  background: #75bd9f;
+  border: 1px solid #182e25;
+}
+
+/* Popup prozorčić */
+#popup-auto {
+  position: absolute;
+  top: 0%;
+  right: 0;
+  font-size: 1.6rem;
+  color: red;
+  font-weight: bold;
+  transform: translateX(-50%);
+  background: #fff8dc;
+  padding: 15px 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+}
+#popup-auto.active {
+  display: block;
+}
+/* Strelica prema gumbu */
+#popup-auto::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -15%;
+  right: 35%;
+  transform: translateX(-50%);
+  border-width: 0 15px 15px;
+  border-style: solid;
+  border-color: transparent transparent #fff8dc transparent;
+}
+
+/******Društvene mreže******/
+.follow {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto 1rem;
+  justify-content: space-around;
+  gap: 2rem;
+  padding: 1.5rem;
+  background-color: var(--color-4);
+  border: 1px solid var(--color-6);
+  border-radius: 5px;
+  animation: hrvatskeBoje 8s infinite alternate;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.4),
+    rgba(255, 255, 255, 1),
+    rgba(72, 107, 223, 0.6)
+  );
+  background-size: 200% 200%;
+  transition: background 2s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+@keyframes hrvatskeBoje {
+  0% {
+    background-position: 0% 40%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 40%;
+  }
+}
+.social-media img {
+  width: 32px;
+}
+.social-media a {
+  text-decoration: none;
+  color: var(--color-6);
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 2rem;
+  font-family: var(--font-h);
+  font-weight: 600;
+  text-align: center;
+  margin: 2rem auto 1rem;
+}
+
+/* ============================= */
+/* FOOTER ZA PODSTRANICE */
+/* ============================= */
+.footer-simple {
+  background-color: var(--color-5);
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  border-top: 3px solid var(--color-6);
+}
+
+.footer-simple img {
+  width: 70px;
+  vertical-align: middle;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  header {
+    background-size: 12rem 10rem, auto, cover;
+    padding: 0.5rem 0;
+  }
+
+  .title h1 {
+    font-size: 3.5rem;
+    padding-left: 1rem;
+  }
+
+  .title p {
+    font-size: 1.6rem;
+    padding-left: 1rem;
+  }
+
+  .desno {
+    padding-right: 1rem;
+  }
+  /* Popup za tablet */
+  #popup-auto {
+    right: 26%;
+    transform: translateX(50%); /* Centriranje */
+  }
+
+  #popup-auto::after {
+    left: 50%; /* Strelica centrirana */
+  }
+}
+
+/* Mobilni uređaji */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    background-size: 8rem 6rem, auto, cover;
+    background-position: bottom 5px left;
+    padding: 0.5rem 0;
+  }
+
+  .title {
+    min-width: 100%;
+    text-align: center;
+    padding: 0.5rem 0;
+  }
+
+  .title h1 {
+    font-size: 2.8rem;
+    padding-left: 0;
+  }
+
+  .title p {
+    font-size: 1.4rem;
+    padding-left: 0;
+  }
+
+  .desno {
+    max-width: 100%;
+    padding-right: 0;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .nav {
+    margin-right: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav a {
+    font-size: 1.4rem;
+    padding: 0.3rem 0.8rem;
+  }
+
+  .materijal-main {
+    margin-top: 16rem;
+    margin-top: 18rem;
+    padding: 0.5rem;
+  }
+  .materijal-forma {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .materijal-main h2 {
+    font-size: 2rem;
+    margin: 1rem auto;
+  }
+
+  .materijal-main p {
+    font-size: 1.2rem;
+    padding: 0 1rem;
+  }
+
+  .general,
+  .specific {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .materijal-forma input:not([type="checkbox"]) {
+    width: 80%;
+  }
+
+  .materijal-forma textarea {
+    width: 95%;
+  }
+
+  #popup-auto {
+    position: fixed;
+    top: 14%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 300px;
+  }
+
+  #popup-auto::after {
+    left: 50%; /* Strelica centrirana */
+  }
+  .footer-simple {
+    padding: 10px 5px;
+    font-size: 1rem;
+  }
+}
+@media (max-width: 462px) {
+  .social-media {
+    width: 100%;
+  }
+}

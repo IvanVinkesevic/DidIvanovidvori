@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="ivan-vinkesevic" />
+    <link rel="stylesheet" href="css/blog-style.css" />
+    <link rel="icon" type="image/ico" href="icons/favicon.ico" />
+
+    <title>Blog</title>
+  </head>
+  <body>
+    <header>
+      <div class="naslov">
+        <h1>Did Ivanovi dvori</h1>
+        <h2>Pogled sa sela na zbivanja u svijetu</h2>
+      </div>
+      <div class="desno">
+        <p>Danas je <span id="datetime"></span></p>
+        <nav class="navigacija">
+          <a href="index.html">Početna</a>
+          <a href="donacije.html">Donacije</a>
+          <a href="projekti.html">Projekti</a>
+          <a href="trg-obrt.html">Suradnja</a>
+          <a href="pravo.html">Pravni akti</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section id="osvrti"></section>
+
+      <aside>
+        <div class="archive-button-container">
+          <button class="archive-btn" onclick="showArchive()">
+            📁 Prelistaj arhivu osvrta
+          </button>
+        </div>
+        <h3>Ankete <br /><span class="strelica-dolje"></span></h3>
+        <div class="call one">
+          <a href="ankete.html">
+            <h4 class="an-title">Ispunite anketu!</h4>
+            <p>Pregledajte rezultate prethodnih anketa!</p>
+            <div class="inside">
+              <img src="grafike/irs-logo2.png" alt="IRS" width="120px" />
+              <p>Saznajte što Hrvati misle o selu danas!</p>
+            </div>
+          </a>
+        </div>
+        <h3>Pjesnici o selu <br /><span class="strelica-dolje"></span></h3>
+        <div class="call two">
+          <a href="poets.html" target="_blank">
+            <img src="slike-pjesnici/tin2.jpeg" alt="Tin" width="250px"
+          /></a>
+        </div>
+        <h3>Moderno selo <br /><span class="strelica-dolje"></span></h3>
+        <div class="call three">
+          <a
+            href="https://razvojni.hr/moderno-etno-selo-u-srcu-like-kojeg-se-nebi-postidjele-ni-najvece-turisticke-destinacije/"
+          >
+            <img src="slike/tractor.jpg" alt="Traktor"
+          /></a>
+        </div>
+        <!-- DRUŠTVENE MREŽE -->
+        <div class="Follow">
+          <h5>Pratite nas!</h5>
+          <div class="social-media">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+              ><img src="grafike/fb-icon.svg.png" alt="Facebook"
+            /></a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+              ><img src="grafike/instagram.png" alt="Instagram"
+            /></a>
+            <a href="https://twitter.com/" target="_blank" rel="noopener"
+              ><img src="grafike/X_icon.svg.png" alt="X"
+            /></a>
+            <a href="https://telegram.org/" target="_blank" rel="noopener"
+              ><img src="grafike/tg-icon.webp" alt="Telegram"
+            /></a>
+          </div>
+        </div>
+      </aside>
+    </main>
+    <footer>
+      <div class="odjava">
+        <h5>Kontaktirajte autora:</h5>
+        <p>
+          WhatsApp:
+          <a href="tel:00385913900416">+385913900416</a> &nbsp;&nbsp;&nbsp;
+          <br />e-mail:
+          <a href="mailto:didivanovidvori@outlook.com? subject=Poruka"
+            >didivanovidvori@outlook.com
+          </a>
+        </p>
+      </div>
+      <div id="copyright">
+        &copy;2025 &nbsp;<img
+          class="ES"
+          src="logo/El-shockac-logo-2.png"
+          alt="ES"
+          width="20px"
+        />
+        Sva prava pridržana
+      </div>
+      <div class="right">
+        <img src="grafike/irs-logo2.png" alt="logo" />
+      </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/firebase-blog.js"></script>
+    <script src="js/blog.js"></script>
+    <script src="js/time-script.js"></script>
+  </body>
+</html>

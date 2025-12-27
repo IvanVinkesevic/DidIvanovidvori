@@ -1,0 +1,887 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
+:root {
+  --color-1: #a66d18;
+  --color-2: #e2dfd9;
+  --color-3: #c5a16b;
+  --color-4: #f7f1f1;
+  --color-5: #755d38;
+  --color-6: #333;
+  --font-family-h: "Caveat", system-ui;
+  --font-family-t: Arial, sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-color: black;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 2px;
+  background: url("../grafike/kucica.png") no-repeat bottom left,
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 15%,
+      rgba(211, 143, 41, 0.75) 45%,
+      rgba(0, 0, 0, 0.8) 80%
+    ),
+    url(../grafike/cigle.png) no-repeat center center;
+  background-size: 13rem 9.5rem, auto, cover;
+  height: fit-content;
+  border: 3px solid #a57124;
+  justify-content: space-between;
+  z-index: 10;
+}
+h1,
+h2 {
+  font-family: var(--font-family-h);
+  font-weight: 700;
+}
+.naslov {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+  flex: 0 0 auto;
+  align-items: center;
+  font-family: var(--font-family-h);
+  color: bisque;
+}
+h1 {
+  font-size: clamp(2.6rem, 4.5vw, 4.5rem);
+  margin: 0 auto;
+}
+.naslov h2 {
+  font-size: 2.5rem;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+.desno {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: var(--font-family-h);
+  font-weight: 400;
+  color: bisque;
+}
+.desno p {
+  font-size: 1.6rem;
+}
+#datetime {
+  font-size: 1.6rem;
+  color: var(--color-4);
+  padding: 0.5rem 4rem 0 0;
+}
+
+.navigacija {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-inline: 2rem;
+  position: relative;
+  z-index: 2;
+}
+.navigacija a {
+  white-space: nowrap;
+  font-size: 1.8rem;
+  color: var(--color-2);
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 5px 3px 5px 3px rgb(156, 128, 88);
+}
+.navigacija a:hover {
+  background-color: var(--color-3);
+  border: 1px solid var(--color-4);
+}
+main {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  margin: 0 3px;
+  padding: 11rem 0 1rem 0;
+  background-color: var(--color-2);
+}
+#osvrti {
+  background-color: var(--color-2);
+  width: 60%;
+  font-size: 1.8rem;
+  padding: 1rem 2rem 2rem 2rem;
+  box-shadow: 0 3px 5px 3px rgb(156, 128, 88);
+}
+
+.archive-button-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.archive-btn {
+  padding: 12px 24px;
+  background: #4caf50;
+  color: white;
+  border: 1px solid rgb(51, 77, 51);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.archive-btn:hover {
+  background: #45a049;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.archive-modal {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  background: white !important;
+  padding: 30px !important;
+  border: 3px solid #4caf50 !important;
+  border-radius: 15px !important;
+  z-index: 9999 !important;
+  max-width: 80% !important;
+  max-height: 80% !important;
+  overflow-y: auto !important;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.close-btn {
+  float: right !important;
+  background: red !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px 15px !important;
+  cursor: pointer !important;
+  border-radius: 5px !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+.archive-item {
+  margin: 15px 0 !important;
+  padding: 15px !important;
+  border-bottom: 2px solid #ddd !important;
+  background: #f9f9f9 !important;
+  border-radius: 8px !important;
+}
+.archive-item h4 {
+  margin: 0 0 8px 0 !important;
+  color: #333 !important;
+  font-size: 18px !important;
+}
+.archive-item small {
+  color: #666 !important;
+  font-size: 14px !important;
+}
+
+.archive-modal {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  background: white !important;
+  padding: 30px !important;
+  border: 3px solid #4caf50 !important;
+  border-radius: 15px !important;
+  z-index: 9999 !important;
+  max-width: 80% !important;
+  max-height: 80% !important;
+  overflow-y: auto !important;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5) !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+.close-btn {
+  float: right !important;
+  background: red !important;
+  color: white !important;
+  border: none !important;
+  padding: 10px 15px !important;
+  cursor: pointer !important;
+  border-radius: 5px !important;
+  font-size: 16px !important;
+  font-weight: bold !important;
+}
+.archive-item {
+  margin: 15px 0 !important;
+  padding: 15px !important;
+  border-bottom: 2px solid #ddd !important;
+  background: #f9f9f9 !important;
+  border-radius: 8px !important;
+}
+.archive-item h4 {
+  margin: 0 0 8px 0 !important;
+  color: #333 !important;
+  font-size: 18px !important;
+}
+.archive-item small {
+  color: #666 !important;
+  font-size: 14px !important;
+}
+
+.reaction-buttons {
+  margin: 20px 0;
+  display: flex;
+  gap: 15px;
+}
+
+.like-btn,
+.dislike-btn {
+  padding: 10px 20px;
+  border: 2px solid #ddd;
+  border-radius: 25px;
+  background: white;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.like-btn:hover {
+  background: #e8f5e8;
+  border-color: #4caf50;
+  transform: translateY(-2px);
+}
+
+.dislike-btn:hover {
+  background: #ffe8e8;
+  border-color: #f44336;
+  transform: translateY(-2px);
+}
+
+.like-btn.active {
+  background: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.dislike-btn.active {
+  background: #f44336;
+  color: white;
+  border-color: #f44336;
+}
+
+.like-btn:disabled,
+.dislike-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.like-count,
+.dislike-count {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.reaction-stats {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+}
+
+/*********ASIDE*************/
+aside {
+  display: flex;
+  flex-direction: column;
+  margin: auto 0;
+  align-items: center;
+  background-color: var(--color-2);
+  width: 30%;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: 0 3px 5px 3px rgb(156, 128, 88);
+}
+aside a {
+  color: var(--color-6);
+}
+h3 {
+  font-size: 2.6rem;
+  margin-bottom: 0;
+}
+.strelica-dolje {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 15px solid #ff0000; /* Boja strelice */
+  margin: 0 5px;
+}
+.call {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  align-items: center;
+  border: 5px solid var(--color-3);
+  border-radius: 5px;
+  margin-top: -1rem;
+}
+.an-title {
+  animation: pulsiraj 2s infinite;
+  display: inline-block;
+}
+
+@keyframes pulsiraj {
+  0% {
+    transform: scale(1);
+    color: #ff0000;
+  }
+  50% {
+    transform: scale(1.1);
+    color: #ffff00;
+  }
+  100% {
+    transform: scale(1);
+    color: #ff0000;
+  }
+}
+.one,
+.two,
+.three {
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: var(--color-6);
+}
+.one img {
+  padding-top: 1rem;
+}
+.one h4,
+.one p {
+  color: var(--color-4);
+  margin: 1rem 0;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+.inside p {
+  color: var(--color-6);
+}
+.three {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.three img {
+  width: 70%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border: 2px solid var(--color-3);
+}
+.inside {
+  width: 98%;
+  color: var(--color-6);
+  font-family: "Caveat", sans-serif;
+  background-color: var(--color-4);
+}
+/******Društvene mreže******/
+.follow {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  margin-bottom: 1rem;
+  justify-content: space-around;
+  width: 90%;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  border: 1px solid var(--color-6);
+  border-radius: 5px;
+  animation: hrvatskeBoje 8s infinite alternate;
+  background: linear-gradient(
+    90deg,
+    rgba(243, 86, 86, 0.4),
+    rgba(255, 255, 255, 1),
+    rgba(72, 107, 223, 0.89)
+  );
+  background-size: 200% 200%;
+  transition: background 2s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+@keyframes hrvatskeBoje {
+  0% {
+    background-position: 0% 40%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 40%;
+  }
+}
+.social-media img {
+  width: 32px;
+}
+.social-media a {
+  text-decoration: none;
+  color: var(--color-6);
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 2rem;
+  font-family: var(--font-h);
+  color: #8b1a1a;
+  text-align: center;
+  margin: 2rem auto 1rem;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  height: fit-content;
+  margin: 0 3px;
+  border: 2px solid #a57124;
+  background-color: black;
+  background: url(../grafike/kucica.png) no-repeat bottom 0 left 0, black;
+  background-size: 10rem 6rem, cover;
+  font-family: var(--font-family-h);
+  color: #ffffff;
+}
+
+.odjava {
+  width: 33%;
+  font-size: 14px;
+  font-family: var(--font-family-h);
+  justify-items: center;
+}
+.odjava h5 {
+  margin: 0;
+  padding: 1rem 3rem 0 0;
+}
+.odjava p {
+  margin: 0;
+  padding-top: 0.5rem;
+  font-family: var(--font-family-t);
+}
+.odjava a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-family-h);
+  font-size: 16px;
+}
+.odjava a:hover {
+  color: #7bb643;
+  text-shadow: 0 0 2px #fff, 0 0 5px #0fa;
+  transition: 0.3s;
+}
+#copyright {
+  flex-basis: 33%;
+  font-size: small;
+  text-align: center;
+  padding: 4rem 0 0 7rem;
+}
+#copyright p {
+  font-size: 1.2rem;
+}
+.ES {
+  width: 2.5em;
+  vertical-align: middle;
+}
+
+.right {
+  width: 33%;
+  text-align: center;
+  padding: 1.5rem 0 0 0;
+}
+
+.right img {
+  display: block;
+  width: 120px;
+  margin: auto;
+}
+/* RESPONZIVNOST - TABLET */
+@media (max-width: 1024px) {
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    min-height: fit-content;
+    padding: 0.5rem 0;
+  }
+
+  .naslov {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .naslov h1 {
+    font-size: 4rem;
+    margin: 0;
+  }
+
+  .naslov h2 {
+    margin: 0;
+    font-size: 2.2rem;
+  }
+
+  .desno {
+    width: 100%;
+    align-items: center;
+  }
+
+  #datetime {
+    padding: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .navigacija {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0 auto;
+  }
+
+  .navigacija a {
+    font-size: 1.6rem;
+    padding: 4px 10px;
+  }
+
+  main {
+    flex-direction: column;
+    padding-top: 15rem;
+  }
+
+  #osvrti {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  aside {
+    width: 90%;
+    margin: 2rem auto;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 4rem;
+  }
+  aside h3 {
+    margin-left: 3rem;
+  }
+  .call {
+    width: 55%;
+    height: 22rem;
+    padding: 1rem;
+  }
+
+  .Follow {
+    order: 0;
+    width: 80%;
+  }
+}
+
+/* RESPONZIVNOST - MOBITEL */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+
+  .naslov {
+    width: 100%;
+    text-align: center;
+  }
+
+  .naslov h2 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  .desno {
+    width: 100%;
+    align-items: center;
+    margin-top: 1rem;
+  }
+  .desno p {
+    display: none;
+  }
+  #datetime {
+    display: none;
+  }
+  .navigacija {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .navigacija a {
+    font-size: 1.4rem;
+    padding: 3px 8px;
+  }
+
+  main {
+    padding-top: 14rem;
+  }
+
+  #osvrti {
+    width: 95%;
+    font-size: 1.6rem;
+  }
+
+  aside {
+    width: 95%;
+    flex-direction: column;
+  }
+  .strelica-dolje {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid #ff0000;
+    margin: 0 5px;
+  }
+  .call {
+    width: 90%;
+    height: fit-content;
+  }
+
+  /* Svaki naslov ide u svoj div */
+
+  /* Ankete grupa */
+  aside h3:nth-of-type(1) {
+    order: 1;
+  } /* Ankete naslov */
+  .call.one {
+    order: 2;
+  } /* Ankete div */
+
+  /* Pjesnici grupa */
+  aside h3:nth-of-type(2) {
+    order: 3;
+  } /* Pjesnici naslov */
+  .call.two {
+    order: 4;
+  } /* Pjesnici div */
+
+  /* Osvrti (glavni sadržaj) */
+  #osvrti {
+    order: 5;
+  }
+
+  /* Moderno selo grupa */
+  aside h3:nth-of-type(3) {
+    order: 6;
+  } /* Moderno selo naslov */
+  .call.three {
+    order: 7;
+  } /* Moderno selo div */
+
+  /* Društvene mreže */
+  .Follow {
+    order: 8;
+  }
+
+  footer {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .odjava,
+  #copyright,
+  .right {
+    width: 100%;
+    padding: 0.5rem 0;
+  }
+
+  #copyright {
+    padding: 1rem 0 0 0;
+  }
+}
+
+/* iPhone */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .naslov h2 {
+    font-size: 1.6rem;
+  }
+
+  #datetime {
+    font-size: 1.4rem;
+  }
+
+  .navigacija a {
+    font-size: 1.2rem;
+    padding: 2px 5px;
+  }
+
+  main {
+    padding-top: 12rem;
+  }
+
+  h3 {
+    font-size: 2rem;
+  }
+}
+/* POST MODAL STILOVI */
+.post-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  max-width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  z-index: 10001;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  border: 3px solid var(--color-1);
+}
+
+.post-modal h2 {
+  color: var(--color-1);
+  font-family: var(--font-family-h);
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.post-modal small {
+  color: #666;
+  font-size: 1.4rem;
+  display: block;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.post-content {
+  font-size: 1.6rem;
+  line-height: 1.6;
+  color: var(--color-6);
+  margin-top: 20px;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10000;
+}
+
+/* Poboljšaj archive item za klik */
+.archive-item {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.archive-item:hover {
+  background: #e8f5e8 !important;
+  transform: translateY(-2px);
+}
+
+/* Responsive za mobile */
+@media (max-width: 768px) {
+  .post-modal {
+    max-width: 95%;
+    max-height: 90%;
+    padding: 20px;
+  }
+
+  .post-modal h2 {
+    font-size: 2.2rem;
+  }
+
+  .post-content {
+    font-size: 1.4rem;
+  }
+}
+/* =========================================== */
+/* FORMATIRANJE BLOG TEKSTA - NOVO */
+/* =========================================== */
+
+/* ============================================ */
+/* STILOVI ZA BLOG TEKSTOVE - KONAČNA VERZIJA */
+/* ============================================ */
+
+/* Opći stil za blog tekstove */
+#osvrti .blog-text {
+  font-family: Georgia, serif;
+  color: #333;
+}
+
+/* Stil za paragrafe unutar blog teksta */
+#osvrti .blog-paragraph {
+  white-space: pre-wrap !important;
+  white-space: break-spaces !important;
+  line-height: 1.6 !important;
+  font-size: 1.6rem !important;
+  margin-bottom: 1.5rem !important;
+  text-align: justify !important;
+}
+
+/* Stil za blog tekstove u modalu */
+.post-content .blog-paragraph {
+  white-space: pre-wrap !important;
+  white-space: break-spaces !important;
+  line-height: 1.6 !important;
+  font-size: 1.6rem !important;
+  margin-bottom: 1.5rem !important;
+  text-align: justify !important;
+}
+
+/* Stil za citate */
+#osvrti .blog-text blockquote {
+  border-left: 4px solid #3498db;
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  background: #f8f9fa;
+  font-style: italic;
+  color: #555;
+  font-size: 1.6rem;
+}
+
+/* Stil za bold i italic */
+#osvrti .blog-text strong {
+  color: #2c3e50;
+  font-weight: 700;
+}
+
+#osvrti .blog-text em {
+  color: #e74c3c;
+  font-style: italic;
+}
+
+/* Responsive za mob */
+@media (max-width: 768px) {
+  #osvrti .blog-paragraph,
+  .post-content .blog-paragraph {
+    font-size: 1.6rem !important;
+    line-height: 1.7 !important;
+    margin-bottom: 2rem !important;
+  }
+}

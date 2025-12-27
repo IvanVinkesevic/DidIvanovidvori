@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="ivan-vinkesevic" />
+    <link rel="stylesheet" href="css/materijal-style.css" />
+    <link rel="icon" type="image/ico" href="icons/favicon.ico" />
+    <title>IRS – Materijal</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="title">
+        <h1>Did Ivanovi dvori</h1>
+        <p>Ovdje možete donirati alat, materijal ili svoj rad</p>
+      </div>
+      <div class="desno">
+        <p>Danas je <span id="datetime"></span></p>
+        <nav class="nav">
+          <a class="btn" href="index.html">Početna</a>
+          <a class="btn" href="projekti.html">Projekti</a>
+          <a class="btn" href="donacije.html">Donacije</a>
+          <a class="btn" href="blog.html">Blog</a>
+          <a class="btn" href="pravo.html">Pravni akti</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- GLAVNI SADRŽAJ -->
+    <main class="materijal-main">
+      <h2>Donirajte materijal, alat ili usluge!</h2>
+      <p>
+        Hvala ti što razmišljaš o podršci našem radu! Donacijom pomažeš obnovi
+        hrvatskog sela, razvoju projekata i edukaciji mladih obitelji koje žele
+        započeti novi život na selu.
+      </p>
+
+      <div id="popup-auto" class="popup-auto">
+        Ako želite donirati novac,<br />
+        to možete učiniti ovdje
+      </div>
+
+      <section class="materijal-forma">
+        <article class="general">
+          <div id="foot">
+            <h3>Did Ivanovi dvori</h3>
+            <p>Inicijativa za revitalizaciju hrvatskog sela</p>
+          </div>
+          <div id="logo">
+            <img src="grafike/irs-logo2.png" alt="IRS logo" />
+          </div>
+          <h2>Osnovni podaci o darovatelju</h2>
+
+          <form action="https://formspree.io/f/meonybvq" method="POST">
+            <input
+              type="hidden"
+              name="_subject"
+              value="🐱 IRS - Donacija materijala"
+            />
+
+            <!-- Osnovni podaci -->
+            <fieldset>
+              <legend>Ime i prezime / Naziv firme:</legend>
+              <input type="text" name="ime" required />
+            </fieldset>
+
+            <br />
+
+            <fieldset>
+              <legend>Email adresa:</legend>
+              <input type="email" name="email" required />
+            </fieldset>
+
+            <fieldset>
+              <legend>Telefon:</legend>
+              <input type="tel" name="telefon" required />
+            </fieldset>
+
+            <br />
+
+            <!-- Privola -->
+            <label>
+              <input type="checkbox" name="privola" required />
+              Slažem se da udruga koristi moje podatke isključivo za potrebe
+              organizacije donacije.
+            </label>
+        </article>
+
+        <article class="specific">
+          <!-- Vrsta donacije -->
+          <fieldset>
+            <legend>Vrsta donacije:</legend>
+            <select name="vrsta" required>
+              <option value="">-- Odaberite --</option>
+              <option value="materijal">Građevinski materijal</option>
+              <option value="alat">Alat (novi ili rabljeni)</option>
+              <option value="namjestaj">Namještaj (novi ili rabljeni)</option>
+              <option value="usluge">Usluge</option>
+            </select>
+          </fieldset>
+
+          <!-- Detalji -->
+          <fieldset>
+            <legend>Detalji donacije:</legend>
+            <textarea
+              name="detalji"
+              rows="4"
+              placeholder="Npr. 10 vreća cementa, komplet alata, keramičarski rad..."
+            ></textarea>
+          </fieldset>
+
+          <!-- Prijevoz -->
+          <fieldset>
+            <legend>Prijevoz:</legend>
+            <select name="prijevoz">
+              <option value="imam">Imam vlastiti prijevoz</option>
+              <option value="trebam">Trebam prijevoz udruge</option>
+            </select>
+          </fieldset>
+
+          <fieldset>
+            <legend>Adresa (ako trebamo preuzeti):</legend>
+            <input type="text" name="adresa" />
+          </fieldset>
+
+          <!-- Vrijeme -->
+          <fieldset>
+            <legend>Željeni datum i vrijeme donacije:</legend>
+            <input type="datetime-local" name="datum" />
+          </fieldset>
+
+          <!-- Napomena -->
+          <label>Dodatne napomene:</label>
+          <textarea name="napomene" rows="3"></textarea>
+
+          <!-- Gumb -->
+          <div class="form-submit">
+            <button class="form-btn" type="submit">Pošalji donaciju</button>
+          </div>
+          </form>
+        </article>
+      </section>
+    </main>
+
+    <!-- PRAĆENJE NA DRUŠTVENIM MREŽAMA -->
+    <div class="follow">
+      <h5>Pratite nas!</h5>
+      <div class="social-media">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener">
+          <img src="grafike/fb-icon.svg.png" alt="Facebook" />
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener">
+          <img src="grafike/instagram.png" alt="Instagram" />
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener">
+          <img src="grafike/X_icon.svg.png" alt="X" />
+        </a>
+        <a href="https://telegram.org/" target="_blank" rel="noopener">
+          <img src="grafike/tg-icon.webp" alt="Telegram" />
+        </a>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-simple">
+      <p>
+        &copy; 2025 
+        <img src="grafike/irs-logo2.png" alt="IRS logo" />
+        Inicijativa za revitalizaciju hrvatskog sela
+      </p>
+    </footer>
+    <script src="js/time-script.js"></script>
+    <script src="js/autopop-script.js"></script>
+  </body>
+</html>

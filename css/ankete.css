@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Chewy&display=swap");
+
+:root {
+  --color-1: #a66d18;
+  --color-2: #e2dfd9;
+  --color-3: #c5a16b;
+  --color-4: #f7f1f1;
+  --color-5: #755d38;
+  --color-6: #333;
+  --font-h: "Caveat", sans-serif;
+  --font-t: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  background: #f8f8f8;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  background: url("../grafike/kucica.png") no-repeat top 5px left,
+    url("../grafike/irs-logo2.png") no-repeat top 50% right 0,
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 15%,
+      rgba(0, 0, 0, 0.8) 30%,
+      rgba(197, 135, 42, 0.65) 55%,
+      rgba(75, 52, 18, 0.75) 70%,
+      rgba(0, 0, 0, 1) 90%
+    ),
+    url("../grafike/cigle.png") no-repeat center center;
+  background-size: 9rem 7rem, 9rem auto, auto, cover;
+  color: var(--color-4);
+  padding: 1rem 0 1rem 7rem;
+}
+
+.anketa-title {
+  display: flex;
+  flex-direction: column;
+  min-width: 70%;
+  align-items: center;
+  gap: 0.7rem;
+}
+h1 b {
+  font-family: "Caveat", sans serif;
+  font-size: clamp(2.2rem, 5vw + 1rem, 2.8rem);
+}
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+.main-nav a {
+  font-size: 1.4rem;
+  font-family: var(--font-h);
+  color: var(--color-2);
+  text-decoration: none;
+  padding: 0.2rem 1rem;
+  border-radius: 0.6rem;
+  box-shadow: 5px 3px 5px 3px rgba(156, 128, 88, 0.7);
+}
+.main-nav a:hover {
+  background: var(--color-3);
+}
+.active {
+  display: flex;
+  justify-items: left;
+  align-self: flex-end;
+}
+header a.nova-anketa {
+  background: #6c8684;
+  color: white;
+  text-decoration: none;
+  font-family: Caveat;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  height: fit-content;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+header a.nova-anketa:hover {
+  background: #90ccc6;
+  color: #333;
+}
+.nova-anketa span {
+  animation: blinkText 2s infinite alternate;
+  display: inline-block;
+}
+
+@keyframes blinkText {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  gap: 2rem;
+  height: calc(100vh - 70px);
+}
+
+aside {
+  width: 25%;
+  background: #e0f2f1;
+  padding: 20px;
+  overflow-y: auto;
+  border-right: 1px solid var(--color-3);
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+aside li:hover {
+  background: #b2dfdb;
+}
+
+section.rezultati {
+  flex-grow: 1;
+  background: white;
+  padding: 0 2rem;
+  border-right: 1px solid var(--color-3);
+}
+
+.pitanje-sadrzaj {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.odgovori {
+  flex: 1;
+}
+
+.mini-chart-container {
+  flex-shrink: 0;
+  margin-top: 10px;
+}
+
+.option-result {
+  margin: 10px 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #f0f0f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: #4caf50;
+  transition: width 0.3s ease;
+}
+
+.option-stats {
+  float: right;
+  font-weight: bold;
+}
+.legenda {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.legenda-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.legenda-bozja {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 3px;
+}
+
+.legenda-text {
+  color: #666;
+}
+.footer-simple {
+  margin-top: auto;
+  background-color: var(--color-5);
+  color: var(--color-4);
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  border-top: 3px solid var(--color-6);
+}
+
+.footer-simple img {
+  width: 5rem;
+  vertical-align: middle;
+}
+.footer-simple p {
+  color: var(--color-2);
+  font-family: Caveat;
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  header {
+    background: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 15%,
+        rgba(0, 0, 0, 0.8) 30%,
+        rgba(197, 135, 42, 0.65) 55%,
+        rgba(75, 52, 18, 0.75) 70%,
+        rgba(0, 0, 0, 1) 90%
+      ),
+      url("../grafike/cigle.png") no-repeat center center;
+    background-size: auto, cover;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    min-height: fit-content;
+    padding: 0.5rem 0.5rem;
+    gap: 0.5rem;
+    margin: auto;
+    text-align: center;
+  }
+  .anketa-title h1 {
+    padding-top: 0.5rem;
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+  .main-nav {
+    margin-bottom: 1rem;
+    gap: 0.5rem;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .main-nav a {
+    font-size: 1.1rem;
+    padding: 0.3rem 0.8rem;
+  }
+  .active {
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+  header a.nova-anketa {
+    padding: 3px 6px;
+    font-size: 0.9rem;
+  }
+  /* Responzivnost za container i aside */
+  .container {
+    flex-direction: column;
+    height: auto;
+    gap: 1rem;
+  }
+
+  aside {
+    width: 100%;
+    order: -1;
+
+    section.rezultati {
+      padding: 0 1rem;
+    }
+
+    .pitanje-sadrzaj {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+}

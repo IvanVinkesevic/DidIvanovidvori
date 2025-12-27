@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/member-list.css" />
+    <link rel="icon" type="image/ico" href="icons/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Popis članova</title>
+    
+  </head>
+  <body>
+    <header>
+      <div class="name">
+        <span class="crveno">I</span
+        ><span class="tamno-plavo">nicijativa za </span>
+        <span class="crveno">r</span
+        ><span class="tamno-plavo">evitalizaciju 
+        hrvatskog <span class="crveno">s</span
+        ><span class="tamno-plavo">ela</span>  
+      </div>
+    </header>
+    <h1>Popis članova udruge</h1>
+
+    <table>
+      <thead>
+        <tr>
+          <th><img src="grafike/irs-logo2.png" alt="logo" width="50px"></th>
+          <th >Ime</th>
+          <th >Prezime</th>
+          <th>Grad</th>
+          <th>E-mail</th>
+          <th>Akcije</th>
+        </tr>
+      </thead>
+      <tbody id="membersTableBody">
+        <tr>
+          <td colspan="7">Učitavanje podataka...</td>
+        </tr>
+      </tbody>
+    </table>
+<footer>
+  <hr>
+  <p class="footer-text"><div class="name">
+        <span class="crveno">I</span
+        ><span class="tamno-plavo">nicijativa za </span>
+        <span class="crveno">r</span
+        ><span class="tamno-plavo">evitalizaciju 
+        hrvatskog <span class="crveno">s</span
+        ><span class="tamno-plavo">ela</span>  
+      </div> &nbsp;&copy;2025 Prijavljeno u Registar udruga </p>
+</footer>
+    <!-- Firebase CDN -->
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.5/firebase-firestore-compat.js"></script>
+
+    <!-- Moj kod -->
+    <script src="js/fb-member-list.js"></script>
+  </body>
+</html>

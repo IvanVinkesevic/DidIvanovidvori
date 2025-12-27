@@ -1,0 +1,263 @@
+/* RESET I OSNOVNI STILOVI */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f8f9fa;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* HEADER I LOGO */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 30px 0;
+  border-bottom: 3px solid #2c5530;
+  background: linear-gradient(135deg, #4a7c59 0%, #2c5530 100%);
+  color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-container {
+  margin-bottom: 20px;
+}
+
+.logo-placeholder {
+  width: 150px;
+  height: 150px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 3px dashed rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-style: italic;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  font-size: 1.8em;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* NAVIGACIJA */
+nav {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  position: sticky;
+  top: 10px;
+  z-index: 100;
+}
+
+nav h3 {
+  color: #2c5530;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav-links a {
+  background: #4a7c59;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-size: 0.9em;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  background: #2c5530;
+  transform: translateY(-2px);
+}
+
+/* GLAVNI SADRŽAJ */
+main {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.clanak {
+  margin-bottom: 50px;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #e9ecef;
+  scroll-margin-top: 180px;
+}
+
+.clanak:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+}
+
+.clanak h3 {
+  color: #2c5530;
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4a7c59;
+}
+
+.clanak p {
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.clanak ul,
+.clanak ol {
+  margin: 15px 0;
+  padding-left: 30px;
+}
+
+.clanak li {
+  margin-bottom: 8px;
+}
+
+/* FOOTER I DOWNLOAD */
+footer {
+  text-align: center;
+  margin-top: 50px;
+  padding: 30px;
+  background: #2c5530;
+  color: white;
+  border-radius: 10px;
+}
+
+.download-btn {
+  display: inline-block;
+  background: #ff6b35;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+  background: #e55a2b;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #4a7c59;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+/* RESPONZIVNOST */
+
+@media (min-width: 769px) {
+  .back-to-top {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .nav {
+    position: relative;
+    top: auto;
+    max-width: 100%;
+  }
+  .nav-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
+  }
+
+  .nav-links a {
+    flex: 1;
+    min-width: 120px;
+    max-width: 150px;
+    font-size: 0.75em;
+    padding: 8px 5px;
+    text-align: center;
+  }
+
+  .logo-placeholder {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clanak ul,
+  .clanak ol {
+    padding-left: 20px;
+  }
+
+  header {
+    padding: 20px 10px;
+  }
+  nav h3 {
+    font-size: 1em;
+    margin-bottom: 8px;
+  }
+
+  .nav-links {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4px;
+  }
+
+  .nav-links a {
+    font-size: 0.65em;
+    padding: 5px 3px;
+    border-radius: 10px;
+  }
+}

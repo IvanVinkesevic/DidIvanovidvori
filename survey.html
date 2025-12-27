@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/survey.css" />
+    <title>Ispuni anketu</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="js/time-script.js"></script>
+    <link rel="stylesheet" href="css/survey.css" />
+ <link
+      href="https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap"
+      rel="stylesheet"
+    />
+
+<body>
+    
+      <header >
+        <p>Danas je <span id="datetime"></span></p>
+          <div class="name">             
+          <span class="crveno">I</span
+          ><span class="tamno-plavo">nicijativa za </span>
+          <span class="crveno">r</span
+          ><span class="tamno-plavo">evitalizaciju 
+          hrvatskog <span class="crveno">s</span
+          ><span class="tamno-plavo">ela</span>  
+          </div>
+          <nav class="navigacija">
+            <a href="index.html">Početna</a>
+            <a href="projekti.html">Projekti</a>
+            <a href="ankete.html">Ankete</a>
+            <a href="blog.html">Blog</a>
+          </nav> 
+      </header>
+<section>
+      <h1 class="cta ">Ispunite anketu!</h1>
+      <h3>Koliko se slažete sa sljedećim tvrdnjama?</h3>
+      <form id="responseForm"></form>
+      <div id="loadingMessage">Učitavam anketu...</div>
+      <div id="thankYou" class="hidden">
+        <h2>Hvala na sudjelovanju! 💚</h2>
+        <p>Vaši su odgovori zabilježeni.</p>
+      </div>
+    </section>
+    <script src="js/fb-survey.js"></script>
+  </body>
+</html>

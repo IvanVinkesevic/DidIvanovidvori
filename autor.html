@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="ivan-vinkesevic" />
+    <link rel="stylesheet" href="css/autor.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <title>Did Ivanovi dvori</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Did Ivanovi dvori</h1>
+      <nav class="nav">
+        <a class="btn" href="index.html">Početna</a>
+        <a class="btn" href="vizija.html">Vizija</a>
+        <a class="btn" href="blog.html">Blog</a>
+      </nav>
+    </header>
+    <main>
+      <section id="one">
+        <div class="slika-1">
+          <img src="slike/starac.png" alt="Stari" />
+        </div>
+        <div class="tekst">
+          <h3>Riječ domaćina...</h3>
+          <p>
+            Rođen sam u Zagrebu, gradu kojeg volim, u kojem sam i proživio skoro
+            cijeli život. Moji su nekada davno došli iz Slavonije, u grad koji
+            nudi prilike, nudi bolji život. Gledajući u što se pretvaraju ljudi
+            i grad, vječitu gužvu, žurbu i trčanje za novcem, odlučio sam da,
+            iako rođen u gradu, ja u njemu neću i umrijeti. Bogu hvala, putujući
+            kroz život, skupio sam i neka znanja. Nije mi strano sazidati nešto,
+            a ni kopati. Od oca stolara nisam naslijedio samo dužinu ruku, nego
+            i umijeće rada s njima. Vjerujem u Boga i cijenim filozofiju stoika,
+            kada sam sam nisam usamljen, nego uživam u radu. Električne
+            instalacije su mi struka, a vodoinstalacije sam naučio silom
+            prilika. Služim se i računalom, fleksericom, valjkom za krečenje,
+            motornom pilom, cirkularom i engleskim jezikom...kad sve uzmem,
+            trebalo bi biti dovoljno da svojim rukama obnovim ovu krasnu kuću, a
+            uz Božju pomoć - možda i koju više.
+          </p>
+          <p id="potpis">Ivan Vinkešević</p>
+        </div>
+      </section>
+      <section id="two">
+        <div class="tekst2">
+          Ova kuća, poput mnogih, stajala je prazna. Čekala da se uruši do
+          kraja. Dobio sam je za cijenu koju ljudi plaćaju za servis skupljeg
+          auta. Zajedno s 2 hektara zemlje, na kojoj ću posaditi voćnjak. Ne
+          gajim nadu da ću to voće ikad jesti, ali možda hoće moja djeca i
+          unuci. Kuća je veličanstvena, stara, gospodska...stvarno bi bilo šteta
+          da je prepustim propadanju. Tijekom 3 godine, koliko smo zet i ja
+          tražili imanje za njih, obišli smo desetine kuća, imanja, farmi...sve
+          to zjapi prazno. Većina se prodaje za smiješne novce, jer ljudi bježe
+          u grad, ne iz njega. Mladi ljudi u gradu sanjaju kredite kojima će
+          kupiti par kvadrata i onda u njima čamiti gledajući televiziju. Nadam
+          se da mogu primjerom pokazati kako se uz puno truda i nešto novaca
+          ovdje može osigurati puno bolje uvjete za život nego li je u gradu.
+          Ovdje čekaju stotine kvadrata, a ja ću pokušati svojim primjerom
+          povući i nekog mlađeg...ako se ne boji rada, ovdje život čeka. Živi
+          polako, hrani se zdravo, radi i moli i - sve će biti u redu.
+        </div>
+        <div class="slika-2">
+          <img src="slike/slika-1-antique.jpg" alt="Kuća" />
+        </div>
+      </section>
+      <!-- Sekcija s kartom -->
+      <section
+        class="map-section"
+        style="display: block !important; padding: 2rem"
+      >
+        <h2>🎯 Gdje se točno nalazi Samarica?</h2>
+        <p class="map-intro">
+          Za sve koji se pitaju gdje je to selo o kojem toliko pišem - evo karte
+          koja pokazuje njegovu lokaciju u
+          <strong>Bjelovarsko-bilogorskoj županiji</strong>.
+        </p>
+        <div
+          id="samarica-map"
+          style="
+            height: 400px;
+            width: 100%;
+            border: 2px solid #c45b18;
+            border-radius: 10px;
+          "
+        ></div>
+
+        <div class="map-details">
+          <p><strong>Selo:</strong> Samarica</p>
+          <p><strong>Koordinate:</strong> 45.735° N, 16.783° E</p>
+          <p><strong>Županija:</strong> Bjelovarsko-bilogorska</p>
+          <p><strong>Općina:</strong> Ivanska</p>
+          <p><strong>Udaljenost od Zagreba:</strong> ~80 km (1 sat vožnje)</p>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="odjava">
+        <h5>Kontaktirajte autora:</h5>
+        <p>
+          WhatsApp:
+          <a href="tel:00385913900416">+385913900416</a> &nbsp;&nbsp;&nbsp;
+          <br />e-mail:
+          <a href="mailto:didivanovidvori@outlook.com? subject=Poruka"
+            >didivanovidvori@outlook.com
+          </a>
+        </p>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy; 2025
+          <img class="ES" src="logo/El-shockac-logo-2.png" alt="Elektrošokac" />
+          Sva prava pridržana
+        </p>
+      </div>
+      <div class="right">
+        <a href="pravo.html"> <img src="grafike/irs-logo2.png" alt="logo" /></a>
+      </div>
+    </footer>
+
+    <script>
+      function initMap() {
+        console.log("Pokrećem initMap...");
+
+        // 1. Pronađi div
+        const mapDiv = document.getElementById("samarica-map");
+        if (!mapDiv) {
+          console.error("❌ samarica-map div NIJE PRONAĐEN!");
+          console.log("Trenutni HTML:", document.body.innerHTML);
+          return;
+        }
+
+        // 2. Forsiraj dimenzije
+        mapDiv.style.height = "400px";
+        mapDiv.style.width = "100%";
+        mapDiv.style.minHeight = "400px";
+
+        // 3. Provjeri Leaflet
+        if (typeof L === "undefined") {
+          console.error("❌ Leaflet nije učitan!");
+          mapDiv.innerHTML =
+            '<div style="padding: 20px; color: #c45b18; text-align: center;">' +
+            "<h3>🌍 Karta lokacije</h3>" +
+            "<p>Samarica, Ivanska</p>" +
+            "<p><small>(Leaflet mapa se nije učitala)</small></p>" +
+            "</div>";
+          return;
+        }
+
+        // 4. Kreiraj kartu
+        try {
+          console.log("✅ Kreiranje karte...");
+          const map = L.map("samarica-map").setView([45.735, 16.783], 9);
+
+          L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: "© OpenStreetMap",
+          }).addTo(map);
+
+          // Marker za Samarica
+          L.marker([45.735, 16.783])
+            .addTo(map)
+            .bindPopup("<b>Samarica</b><br>Moje selo<br>Općina Ivanska")
+            .openPopup();
+
+          // Marker za Zagreb
+          L.marker([45.815, 15.981]).addTo(map).bindPopup("<b>Zagreb</b>");
+
+          console.log("✅ Karta uspješno kreirana!");
+          window.samaricaMap = map; // Spremi za debug
+        } catch (error) {
+          console.error("❌ Greška pri kreiranju karte:", error);
+        }
+      }
+
+      // POKRENI KAD JE DOM SPREMAN
+      document.addEventListener("DOMContentLoaded", initMap);
+
+      // Fallback ako DOMContentLoaded već prošao
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", initMap);
+      } else {
+        setTimeout(initMap, 100);
+      }
+    </script>
+  </body>
+</html>

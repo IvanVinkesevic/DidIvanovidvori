@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="ivan-vinkesevic" />
+    <link rel="stylesheet" href="css/donacije-style.css" />
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
+    <title>IRS – Donacije</title>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="title">
+        <h1>Did Ivanovi dvori</h1>
+        <p>Inicijativa za revitalizaciju hrvatskog sela</p>
+      </div>
+      <div class="desno">
+        <p>Danas je <span id="datetime"></span></p>
+        <nav class="nav">
+          <a class="btn" href="index.html">Početna</a>
+          <a class="btn" href="projekti.html">Projekti</a>
+          <a class="btn" href="materijal.html">Materijal</a>
+          <a class="btn" href="ankete.html">Ankete</a>
+          <a class="btn" href="blog.html">Blog</a>
+        </nav>
+        <div id="popup-auto" class="popup-auto">
+          Ako želite donirati materijal ili<br />
+          alat, to možete učiniti ovdje
+        </div>
+      </div>
+    </header>
+
+    <!-- GLAVNI SADRŽAJ -->
+    <main class="donacije-main">
+      <h2>Podrži Inicijativu za revitalizaciju hrvatskog sela!</h2>
+      <p>
+        Hvala ti što razmišljaš o podršci našem radu! Donacijom pomažeš obnovi
+        hrvatskog sela, razvoju projekata i edukaciji mladih obitelji koje žele
+        započeti novi život na selu.
+      </p>
+
+      <section class="donacije-options">
+        <!-- AIRCASH -->
+        <div class="donacija-blok">
+          <h3>📱 Aircash</h3>
+          <p>Doniraj putem Aircash aplikacije – brzo i jednostavno!</p>
+          <img src="images/aircash-qr.png" alt="Aircash QR kod" class="qr" />
+          <p><strong>Korisničko ime:</strong> +385 91 3900 416</p>
+        </div>
+
+        <!-- REVOLUT -->
+        <div class="donacija-blok">
+          <h3>💙 Revolut</h3>
+          <p>Doniraj putem Revoluta – izravno putem aplikacije ili QR koda.</p>
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://revolut.me/ivinkesevic"
+            alt="Revolut QR kod"
+            class="qr"
+          />
+          <a
+            href="https://revolut.me/ivinkesevic"
+            target="_blank"
+            class="doniraj-btn"
+            >Doniraj putem Revoluta</a
+          >
+        </div>
+
+        <!-- IBAN -->
+        <div class="donacija-blok">
+          <h3>🏦 Bankovna uplata (IBAN)</h3>
+          <p>Možeš uplatiti donaciju izravno na račun udruge:</p>
+          <div class="iban-box">
+            <p>
+              <strong>Primatelj:</strong> Inicijativa za revitalizaciju
+              hrvatskog sela
+            </p>
+            <p><strong>Adresa:</strong> Ul. Jasena 9a, 10040 Zagreb</p>
+            <p><strong>IBAN:</strong> HRXX XXXX XXXX XXXX XXXX X</p>
+            <p><strong>Opis plaćanja:</strong> Donacija za projekt IRS</p>
+            <p><strong>Banka:</strong> Zagrebačka banka</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- DRUŠTVENE MREŽE -->
+      <div class="Follow">
+        <h5>Pratite nas!</h5>
+        <div class="social-media">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+            ><img src="grafike/fb-icon.svg.png" alt="Facebook"
+          /></a>
+          <a href="https://www.instagram.com/" target="_blank" rel="noopener"
+            ><img src="grafike/instagram.png" alt="Instagram"
+          /></a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener"
+            ><img src="grafike/X_icon.svg.png" alt="X"
+          /></a>
+          <a href="https://telegram.org/" target="_blank" rel="noopener"
+            ><img src="grafike/tg-icon.webp" alt="Telegram"
+          /></a>
+        </div>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer-simple">
+      <p>
+        <img src="grafike/irs-logo2.png" alt="" />
+        &copy; 2025 Inicijativa za revitalizaciju hrvatskog sela
+      </p>
+    </footer>
+    <script src="js/time-script.js"></script>
+    <script src="js/autopop-script.js"></script>
+  </body>
+</html>

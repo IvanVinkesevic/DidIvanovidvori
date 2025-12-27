@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>kuca-gunjaca</title>
+    <link rel="stylesheet" href="css/gunjaca.css" />
+    <link rel="icon" type="image/ico" href="icons/favicon.ico" />
+    <style>
+      /* inline CSS - brži start */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 20px;
+        background: #f5f5f5;
+      }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      h1 {
+        color: #2c3e50;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      .links {
+        display: flex;
+        justify-content: space-between;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="links">
+        <a href="projekti.html" class="back-btn">Natrag na projekte</a>
+        <a href="index.html" class="back-btn">Natrag na početnu stranicu</a>
+      </div>
+      <h1>📸 Kuća na selu - kompletna obnova</h1>
+
+      <!-- PROJEKT 1 -->
+      <div class="projekt">
+        <div class="projekt-info">
+          <p><strong>📅 Trajanje:</strong> 14 mjeseci</p>
+          <p><strong>📍 Lokacija:</strong> Samarica</p>
+          <p>
+            <strong>📋 Radovi:</strong> Krov, dimnjaci, pregradni zidovi,
+            stolarija, bravarija, žbukanje, keramika, centralno grijanje,el. i
+            vodo-instalacije
+          </p>
+        </div>
+        <div class="grid-2">
+          <div class="slika-kartica">
+            <img
+              src="gunjaca-slike/slika-1.jpg"
+              alt="Prije obnove"
+              loading="lazy"
+            />
+            <div class="label prije-label">Prije</div>
+            <p class="opis">
+              Tamna soba, nizak plafon, drvena oplata, peć u kutu kuhinje
+            </p>
+          </div>
+          <div class="slika-kartica">
+            <img
+              src="gunjaca-slike/slika-2.jpg"
+              alt="Poslije obnove"
+              loading="lazy"
+            />
+            <div class="label poslije-label">Poslije</div>
+            <p class="opis">
+              Nova žbuka, stolarija, nova boja, svijetlo i prozračno
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <!-- PROJEKT 2 -->
+      <div class="projekt">
+        <h2>Kotlovnica</h2>
+        <div class="grid-2">
+          <div class="slika-kartica">
+            <img
+              src="gunjaca-slike/slika-3.jpg"
+              alt="kotlovnica"
+              loading="lazy"
+            />
+            <div class="label prije-label">Prije</div>
+            <p class="opis">Garaža - neožbukano, uski dimnjak, zemljani pod</p>
+          </div>
+          <div class="slika-kartica">
+            <img
+              src="gunjaca-slike/slika-6.jpg"
+              alt="Dvorište poslije"
+              loading="lazy"
+            />
+            <div class="label poslije-label">Poslije</div>
+            <p class="opis">
+              Moderna kotlovnica koja grije cijelu kuću, Schiedel dimnjaci.
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <!-- PROJEKT 3 -->
+      <div class="projekt">
+        <h2>Dvorišna transformacija</h2>
+        <div class="grid-2">
+          <div class="slika-kartica">
+            <img
+              src="gunjaca-slike/slika-5.jpg"
+              alt="Dvorište prije"
+              loading="lazy"
+            />
+            <div class="label prije-label">Prije</div>
+            <p class="opis">Nepregledno dvorište s divljim rastinjem</p>
+          </div>
+          <div class="slika-kartica">
+            <img
+              src="gunjaca-slike/slika-6.jpg"
+              alt="Dvorište poslije"
+              loading="lazy"
+            />
+            <div class="label poslije-label">Poslije</div>
+            <p class="opis">
+              Nakon 60 kubika šljunka, valjak je napravio parking za 10
+              automobila.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- DODAVANJE PROJEKATA KOPIRAJUĆI BLOK IZNAD -->
+
+      <!-- PROJEKT TEMPLATE (kopiraj za nove) -->
+      <!--
+        <hr>
+        <div class="projekt">
+            <h2>NASLOV PROJEKTA</h2>
+            <div class="grid-2">
+                <div class="slika-kartica">
+                    <img src="slike-projekti/prijeX.jpg" alt="Prije" loading="lazy">
+                    <div class="label prije-label">Prije</div>
+                    <p class="opis">OPIS PRIJE</p>
+                </div>
+                <div class="slika-kartica">
+                    <img src="slike-projekti/poslijeX.jpg" alt="Poslije" loading="lazy">
+                    <div class="label poslije-label">Poslije</div>
+                    <p class="opis">OPIS POSLIJE</p>
+                </div>
+            </div>
+            <div class="projekt-info">
+                <p><strong>📅 Trajanje:</strong> VRIJEME</p>
+                <p><strong>📍 Lokacija:</strong> LOKACIJA</p>
+                <p><strong>📋 Radovi:</strong> ŠTO JE URAĐENO</p>
+            </div>
+        </div>
+        -->
+    </div>
+
+    <script>
+      // Povećanje slike na klik
+      document.querySelectorAll(".slika-kartica img").forEach((img) => {
+        img.addEventListener("click", function () {
+          this.classList.toggle("zoom");
+        });
+      });
+    </script>
+  </body>
+</html>

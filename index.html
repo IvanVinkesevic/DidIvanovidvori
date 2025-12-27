@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="grafike/favicon.ico" />
+    <title>Did Ivanovi dvori</title>
+  </head>
+  <body>
+    <header>
+      <div class="title">
+        <h1>Did Ivanovi dvori</h1>
+        <p>Inicijativa za spas hrvatskog sela</p>
+      </div>
+
+      <div class="works">
+        <img src="gif/planing.gif" alt="planing" />
+        <img src="gif/stemer.gif" alt="stemer" />
+        <img src="gif/radnik.gif" alt="radnik" />
+        <img src="gif/zidar.gif" alt="zidar" />
+        <img src="gif/tacke.gif" alt="tacke" />
+      </div>
+
+      <div class="desno">
+        <p>Danas je <span id="datetime"></span></p>
+
+        <button class="hamburger" aria-label="Meni" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav class="nav">
+          <div class="dropdown">
+            <a class="btn" href="#" aria-haspopup="true">Galerije</a>
+            <div class="dropdown-content" role="menu">
+              <a href="statika.html">Statika</a>
+              <a href="krov.html">Krovište</a>
+              <a href="voda.html">Vodoinstalacije</a>
+              <a href="kanalizacija.html">Kanalizacija</a>
+              <a href="struja.html">Elektroinstalacije</a>
+              <a href="zidanje.html">Zidanje</a>
+              <a href="zbukanje.html">Žbukanje</a>
+              <a href="okolis.html">Okoliš</a>
+            </div>
+          </div>
+
+          <a class="btn" href="projekti.html">Projekti</a>
+          <a class="btn" href="blog.html">Blog</a>
+          <a class="btn" href="autor.html">O meni</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="section">
+        <article class="content">
+          <h2>Kako je sve počelo...</h2>
+          <br />
+          <p class="dropcap">
+            U početku bijaše Riječ. Tako je pisao moj slavni imenjak. Moja kćer
+            i zet završili su agronomiju, vjenčali se i preselili na selo. Kuću
+            smo našli preko oglasa, nakon duga traganja. Bila je u dobrom
+            stanju, ali nije bila dovršena, tri četvrtine rochbau. Oni dijelovi
+            koji su bili u funkciji, nisu estetski niti ergonomski odgovarali
+            mladom paru koji planira imati veliku obitelj. Prepravili smo jednu
+            kupaonu, napravili drugu; promijenili krov i dimnjake, napravili
+            kotlovnicu, uveli centralno grijanje. U cijeloj kući napravili smo
+            estrihe, postavili laminate, zamijenili svu stolariju, zatvorili
+            potkrovlje, svuda stavili izolaciju... <br />
+            Svako jutro mi bi došli iz Zagreba; nazdravili bismo rakijom i
+            svatko na svoje zadatke... S vremenom, dva su susjeda postala
+            obvezni sudionici naših jutarnjih rituala. Uvijek spremni pomoći i
+            uvijek spremni nazdraviti. Riječ po riječ, rakija po rakija i
+            postali smo bliski. Susjed Drago, uz jednu jutarnju, lagano mi je
+            bacio udicu: "Šteta je za tebe, kad tak voliš delat...Šta ćeš sad
+            kad završite? Nego, kupi ti od mene tu kuću koju stalno gledaš, dat
+            ću ti je vrlo jeftino! Da se imaš s čime bavit..." <br />Hvala,
+            Drago! Da, kupio sam i sad sam tu gdje jesam. <br />
+            Drage više nema, ali kuća i ja smo tu. U početku je bila Riječ.
+          </p>
+          <br />
+          <figure>
+            <img src="slike/pogled-s-ulice.jpg" alt="Pogled s ulice" />
+            <figcaption>
+              Ovo je snimljeno nakon što je srušen orah, počupano korijenje i
+              završeno fiksiranje temelja armiranim betonom.
+            </figcaption>
+          </figure>
+        </article>
+
+        <aside class="aside">
+          <div class="aside-preview">
+            <h3>&#127960; Spasimo hrvatsko selo!</h3>
+            <br />
+            <p>
+              Naša sela su pred nestajanjem. Neće nas spasiti ni naša država,
+              niti voljena Europska unija. Ako sami uskoro nešto ne napravimo,
+              nitko to neće učiniti umjesto nas...Mi smo se odlučili udružiti i
+              zajedno pokušati nešto novo.
+              <span class="animated-cta" transition-style="in:wipe:down">
+                <a href="#" class="popup-link" data-popup="aside1"
+                  >Pristupite nam!</a
+                ></span
+              >
+            </p>
+          </div>
+
+          <!-- POPUP 1: PRISTUPNICA -->
+          <div
+            id="aside1"
+            class="popup"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+          >
+            <div class="popup-content" role="document">
+              <button
+                class="close-btn"
+                data-close="aside1"
+                aria-label="Zatvori"
+              >
+                &times;
+              </button>
+
+              <!-- LOGO IRS -->
+              <div class="header-with-logo">
+                <div>
+                  <h2>Spasimo hrvatsko selo!</h2>
+                  <p>
+                    Učlani se u
+                    <strong>IRS - Inicijativu za revitalizaciju sela</strong> i
+                    budi dio promjene!
+                  </p>
+                </div>
+              </div>
+
+              <form id="memberForm" class="form-basic">
+                <fieldset>
+                  <legend>
+                    <h1>
+                      Pristupnica za
+                      <img
+                        src="grafike/irs-logo2.png"
+                        alt="logo"
+                        class="irs-logo"
+                      />
+                    </h1>
+                  </legend>
+
+                  <div class="horizontal">
+                    <div class="form-group duo">
+                      <label for="firstName">Ime:</label>
+                      <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        required
+                      />
+                    </div>
+                    <div class="form-group duo">
+                      <label for="lastName">Prezime:</label>
+                      <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        required
+                      />
+                    </div>
+                  </div>
+
+                  <div class="horizontal">
+                    <div class="form-group duo">
+                      <label for="oib">OIB:</label>
+                      <input
+                        type="text"
+                        id="oib"
+                        name="oib"
+                        pattern="\d{11}"
+                        maxlength="11"
+                        title="OIB mora sadržavati točno 11 znamenki"
+                        required
+                      />
+                    </div>
+                    <div class="form-group duo">
+                      <label for="tel">Telefon:</label>
+                      <input type="tel" id="tel" name="tel" />
+                    </div>
+                  </div>
+
+                  <div class="horizontal">
+                    <div class="form-group duo">
+                      <label for="dob">Datum rođenja:</label>
+                      <input
+                        type="date"
+                        id="dob"
+                        name="dob"
+                        placeholder="dd.mm.gggg."
+                        title="Unesite datum u formatu dd.mm.gggg."
+                      />
+                    </div>
+                    <div class="form-group duo">
+                      <label for="emailUclan">E-mail:</label>
+                      <input
+                        type="email"
+                        id="emailUclan"
+                        name="email"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div class="horizontal">
+                    <div class="form-group duo">
+                      <label for="address">Adresa (ulica i broj):</label>
+                      <input type="text" id="address" name="address" />
+                    </div>
+                    <div class="form-group duo">
+                      <label for="city">Grad:</label>
+                      <input type="text" id="city" name="city" />
+                    </div>
+                  </div>
+                </fieldset>
+
+                <!-- PROMIJENI U CHECKBOX -->
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="consent" name="consent" required />
+                  <label for="consent">
+                    Želim pristupiti
+                    <strong
+                      >Inicijativi za revitalizaciju hrvatskog sela
+                      (IRS)</strong
+                    >
+                  </label>
+                </div>
+
+                <!-- DODAJ SUGLASNOST -->
+                <div class="form-group checkbox-group">
+                  <input type="checkbox" id="privacy" name="privacy" required />
+                  <label for="privacy">
+                    Suglasan/suglasna sam s obradom osobnih podataka prema
+                    <a href="pravilnik.pdf" target="_blank"
+                      >Pravilniku o privatnosti</a
+                    >
+                  </label>
+                </div>
+
+                <div class="btn-container">
+                  <button class="btn-prijava" type="submit">
+                    Pošalji prijavu
+                  </button>
+                </div>
+
+                <p
+                  id="memberMessage"
+                  class="form-message"
+                  aria-live="polite"
+                ></p>
+              </form>
+            </div>
+          </div>
+          <!-- II aside preview -->
+
+          <div class="aside-preview">
+            <h3>&#128362; Medijska podrška!</h3>
+            <br />
+            <p>
+              Pred nama je ogroman posao. Naravno, u svom stilu, planirao sam da
+              većinu odradim sam. Međutim, svi imamo ograničenja, postoji nešto
+              što sam ne mogu nikako...
+              <a href="#" class="popup-link" data-popup="aside2"
+                >Nastavite čitati...</a
+              >
+            </p>
+          </div>
+
+          <div
+            id="aside2"
+            class="popup"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+          >
+            <div class="popup-content">
+              <button
+                class="close-btn"
+                data-close="aside2"
+                aria-label="Zatvori"
+              >
+                &times;
+              </button>
+              <h3>&#128362; Medijska podrška!</h3>
+              <p>
+                Pred nama je ogroman posao. Naravno, kako je i planirano -
+                većinu ću odraditi sam. Međutim, postoji nešto što ne mogu
+                sam... Ideju, ako mislite da je vrijedna - treba proširiti.
+                Dobra ideja ne može napraviti ništa ako je ljudi ne vide. Zbog
+                mojih stavova koji nisu uvijek popularni, "izgubljen" je moj
+                prvi <em>FB profil</em>, a na novom imam smanjen doseg. Isti je
+                slučaj i s mojim <em>Telegram</em> kanalom. Na <em>X</em>-u i
+                <em>Instagramu</em> sam "novi". Mainstream mediji su
+                kompromitirani do te mjere da uopće ne razmišljam o njima, a
+                sumnjam i da bi podržali ovakvu inicijativu.
+                <strong>Društvene mreže</strong> su zakon. Zato moja molba ide
+                svima koji čitaju, a smatraju da je ideja dovoljno dobra da bi
+                je podržali: dijelite link na stranicu, na svim mrežama na
+                kojima imate profile. Vas ne košta ništa, a nama možda donese
+                podršku koja nam treba. Možda baš preko vas ova ideja stigne do
+                pravih očiju.
+              </p>
+            </div>
+          </div>
+
+          <div class="aside-preview">
+            <h3>&#128182; Financijska podrška!</h3>
+            <br />
+            <p>
+              Do sada smo sve financirali iz vlastitih izvora, ali za akciju
+              širih razmjera trebat ćemo financijsku pomoć. Ako želite biti dio
+              budućnosti...
+              <a href="#" class="popup-link" data-popup="aside3"
+                >Nastavite čitati...</a
+              >
+            </p>
+          </div>
+
+          <div
+            id="aside3"
+            class="popup"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+          >
+            <div class="popup-content">
+              <button
+                class="close-btn"
+                data-close="aside3"
+                aria-label="Zatvori"
+              >
+                &times;
+              </button>
+              <h3>Financijska podrška!</h3>
+              <p>
+                Do sada smo sve financirali iz svojih sredstava, ali za akciju
+                širih razmjera trebat ćemo <em>financijsku pomoć</em>. Nećemo
+                žaliti truda ni sredstava da bismo što većem broju mladih ljudi
+                omogućili <strong>novi početak</strong>, na selu. Neke kuće
+                treba popraviti, neke treba prepraviti da bi bile prilagođene
+                novim stanarima i njihovim navikama; za rad u polju i oko kuće
+                treba strojeva i alata; sjeme, sadnice, hrana za perad i
+                stoku...sve to nećemo moći sami. Ukoliko vam se naš program
+                sviđa, možete nas financijski podržati, a mi ćemo obećati da ni
+                jedan novčić neće biti bačen u vjetar. Mislim da nikome ne treba
+                objašnjavati koliko je sve poskupjelo i koliko što košta. Bez
+                pomoći ljudi dobre volje, nećemo daleko stići.
+              </p>
+              <br />
+              <a class="inn" href="donacije.html">Želim pomoći</a>
+            </div>
+          </div>
+
+          <div class="aside-preview">
+            <h3>&#x1F528; Alat i materijal</h3>
+            <p>
+              Imate viška <em>građevinskog materijala</em>? Ne znate što bi s
+              njim? Imate <em>alata</em> koji ne koristite?
+              <a href="#" class="popup-link" data-popup="aside4"
+                >Nastavite čitati...</a
+              >
+            </p>
+          </div>
+
+          <div
+            id="aside4"
+            class="popup"
+            aria-hidden="true"
+            role="dialog"
+            aria-modal="true"
+          >
+            <div class="popup-content">
+              <button
+                class="close-btn"
+                data-close="aside4"
+                aria-label="Zatvori"
+              >
+                &times;
+              </button>
+              <h3>Pomoć u materijalu!</h3>
+              <p>
+                Imate viška <strong>građevinskog materijala</strong>? Ne znate
+                što bi s njim? Imate alata koji ne koristite? Ne bacajte!
+                Nemojte dozvoliti da <strong>alat</strong> skuplja prašinu! Nov
+                ili rabljen -svaki alat ima svrhu. Čak i neispravan alat nekome
+                može poslužiti. Kupili ste neki alat za jedan DIY projekt, a
+                sada samo stoji i smeta? Stara cigla, betonski blokovi, višak
+                pločica ili vreća cementa; grede ili stari namještaj?! Uvijek je
+                tako bilo - ono što je jednima smetnja, drugima može biti
+                korisno. Javite se, dogovorit ćemo se kako ćemo pokupiti i
+                dostaviti tamo gdje treba. Također, ako ste voljni pomoći svojim
+                rukama; ako znate nešto korisno raditi ili samo želite naučiti -
+                javite se!
+              </p>
+              <br />
+              <a class="inn" href="materijal.html">Želim pomoći</a>
+            </div>
+          </div>
+
+          <div class="Follow">
+            <h5>Pratite nas!</h5>
+            <div class="social-media">
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener"
+                ><img src="grafike/fb-icon.svg.png" alt="Facebook"
+              /></a>
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noopener"
+                ><img src="grafike/instagram.png" alt="Instagram"
+              /></a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener"
+                ><img src="grafike/X_icon.svg.png" alt="X"
+              /></a>
+              <a href="https://telegram.org/" target="_blank" rel="noopener"
+                ><img src="grafike/tg-icon.webp" alt="Telegram"
+              /></a>
+            </div>
+          </div>
+        </aside>
+      </section>
+      <section id="center">
+        <article class="story">
+          <p class="dropcap">
+            Grad mog djetinjstva bio je okruženje za odrastanje kakvo sam želio.
+            Kroz cijelu moju mladost, grad je bio sve: glazba, škola, druženje,
+            posao, ljubav, kultura... Gledao sam kako raste, kako se širi, u
+            sebe prima sve; u ponudi velikog grada ima za svakog po nešto, i
+            svatko bi htio komadić nečega za sebe. Mediji, politika,
+            društvo...sa svih strana nas zasipaju savjetima - kakvi trebamo
+            biti, koliko raditi, koliko zarađivati, na što trošiti, što željeti.
+            Svako novo ograničenje predstavljeno je kao borba za neko pravo, kao
+            sloboda. Korporativno okruženje u kojem sam radio sve je to još
+            pojačavalo; oni imaju "dress code", "code of conduct", obvezne
+            osmijehe i small talk, dok razgovaramo na "local language". Moj je
+            jezik prestao biti hrvatski, a ja sam prestajao biti ja. Politička
+            korektnost, suzdržana hladnoća i "ja samo radim svoj posao!" polako
+            su me tjerale da pogled okrenem od grada, prema zelenilu, prema
+            zemlji. Nakon što su grad zadesile dvije zadnje (ne i posljednje)
+            katastrofe, "Covidemija" i "Možemo", nakon što se grad ubrzano puni
+            nekim novim Hrvatima, koji neprekidno trube, ne izgledaju kao mi,
+            nemaju namjeru naučiti naš jezik - shvatio sam da je moje mjesto
+            negdje drugdje, negdje gdje još ima koliko - toliko mira. Na selu.
+          </p>
+          <br /><br />
+          <h2>
+            Neki od YouTube kanala koji su mi bili od velike koristi za vrijeme
+            radova:
+          </h2>
+          <hr />
+          <div class="wrapper">
+            <div class="item vid1">
+              Majstor Mario
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/NkRqy1HqYzc?si=tJzU4L4fFaEMbMjO"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="item vid2">
+              Camarata
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/vkObSi1wPrk?si=nsfV2lQZOjB9pTjF"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="item vid3">
+              Essential Craftsman
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/mnkJuyrfc8s?si=w4C_Myd_YH2hQy93"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="item vid4">
+              Plumber
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/TKJMnQpxIOM?si=d-tpQc-6CItBhpog"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="item vid5">
+              Food-forrest
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/-j715VpDXCY?si=JdMU5fZ1prnQasOu"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="item vid6">
+              Kuhinja Tanja
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/wLL0KXVBDnQ?si=NtVOt5ELzOQ8Zz_K"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="item vid7">
+              Gardener Scott
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/7e-ECyllw4Q?si=cKZSGc3VYJy1qFM0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="item vid8">
+              Keramičar zašto ne
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/6VXMsLdj0BQ?si=XlgUvolmOYAE7nsJ"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </article>
+      </section>
+      <section class="projekt-pozivi">
+        <!-- PRVI POZIV: OPG PLATFORMA -->
+        <div class="poziv-kartica" style="margin-bottom: 40px">
+          <div class="poziv-header">
+            <h2>Kupujmo domaće, podržimo svoje!</h2>
+            <p style="text-align: center; font-size: 24px" ;>
+              &#127813; &#129476; &#127815; &#129385; &#127830;
+            </p>
+          </div>
+
+          <div class="poziv-body">
+            <p>
+              Pronađite zdrave, domaće proizvode izravno od poljoprivrednika u
+              vašoj županiji. Svaka kupnja ostaje u lokalnoj zajednici i pomaže
+              obiteljskim OPG-ovima da opstanu.
+            </p>
+
+            <div style="text-align: center">
+              <a href="http://opg-react-app.vercel.app">
+                Otkrijte lokalne OPG-ove →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- DRUGI POZIV: NEKRETNINE -->
+        <div class="poziv-kartica">
+          <div class="poziv-header">
+            <h2>Izgradite dom, pustite korijenje!</h2>
+            <p>&#127795; 🏡 &#9962;</p>
+          </div>
+
+          <div class="poziv-body">
+            <p>
+              Otkrijte prilike za život u ruralnim područjima. Dostupne kuće,
+              zemljišta i gospodarske zgrade za mlade obitelji koje žele graditi
+              budućnost u skladu s prirodom i tradicionalnom zajednicom.
+            </p>
+
+            <div style="text-align: center">
+              <a href="https://nekretnine-app.vercel.app">
+                Istražite nekretnine na selu →
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <aside class="aside-down">
+          <div class="notes note-1">
+            <h4>Vizija</h4>
+            <p>
+              Glavna nam je namjera pokazati širem krugu mladih ljudi da selo
+              još uvijek postoji, da je živo, iako jedva. Ako uspijemo proširiti
+              ovu ideju, hrvatsko bi <strong>selo</strong> moglo preživjeti. I s
+              njim <strong>hrvatski narod</strong>.
+              <a href="vizija.html" target="_blank">Nastavi čitati...</a>
+            </p>
+          </div>
+          <div class="notes note-2">
+            <h4>Hrvatska sela umiru!</h4>
+            <p>
+              Broj sela bez ijednog stanovnika u Hrvatskoj nezaustavljivo raste.
+              Prije dvije godine <em>Državni zavod za statistiku</em> objavio je
+              da je takvih sela u Hrvatskoj 150, no u međuvremenu je ta brojka
+              narasla na gotovo 200!
+              <a href="sela.html" target="_blank">Nastavi čitati...</a>
+            </p>
+          </div>
+          <div class="notes note-3">
+            <h4><strong>Demografska obnova</strong></h4>
+            <p>
+              U posljednjih 10 godina između 500 i 600 tisuća ljudi iselilo je
+              iz Hrvatske, uglavnom prema Njemačkoj, Irskoj i drugim obećanim
+              zemljama na zapadu. Od 1990. broj stanovnika je manji za milijun.
+              <a href="dem-ob.html" target="_blank">Nastavi čitati...</a>
+            </p>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-container">
+        <div class="obrazac">
+          <h4>Dodaj komentar</h4>
+          <form
+            class="kontakt-forma"
+            action="https://formspree.io/f/xnnlaojj"
+            method="post"
+          >
+            <label for="ime-i-prezime">Ime i prezime:</label>
+            <input
+              type="text"
+              id="ime-i-prezime"
+              name="ime-i-prezime"
+              required
+            />
+
+            <label for="emailKomentar">Email:</label>
+            <input
+              type="email"
+              id="emailKomentar"
+              name="emailKomentar"
+              required
+            />
+
+            <label for="komentar">Komentar:</label>
+            <textarea
+              id="komentar"
+              name="komentar"
+              rows="4"
+              required
+            ></textarea>
+
+            <button type="submit">Pošalji</button>
+          </form>
+        </div>
+
+        <div class="centar">
+          <h4>Design i izrada web stranice:</h4>
+
+          <div class="okvir">
+            <img src="logo/Logo.png" alt="Logo" />
+          </div>
+          <div class="odjava">
+            <p>
+              Održavanje kućanstava i popravak instalacija <br />Ul. Jasena 9a,
+              10040 Zagreb
+            </p>
+            <p>
+              Tel: <a href="tel:00385913900416">+385913900416</a><br />
+              e-mail:
+              <a href="mailto:didivanovidvori@outlook.com"
+                >didivanovidvori@outlook.com</a
+              >
+            </p>
+          </div>
+          <div id="copyright">
+            &copy;2025
+            <img src="logo/El-shockac-logo-2.png" alt="" width="20" /> Sva prava
+            pridržana
+          </div>
+        </div>
+
+        <div class="adds">
+          <h4>Preporuke alata i proizvođača:</h4>
+          <p>
+            Čak i da se nisam upustio u ovaj zadatak, to ne bi umanjilo moju
+            ljubav prema alatima. Radeći adaptacije na (već trećoj) kući,
+            naravno da sam isprobao, pa i uništio, cijeli spektar alata, od
+            ručnih do strojeva. Nakon priličnog iskustva, izvojio bih nekoliko
+            brandova alata koji su se pokazali najpouzdanijima:
+          </p>
+          <div class="brand-logos-1">
+            <a href="https://www.bosch-professional.com/hr/hr/"
+              ><img src="logo/bosch.png" id="img-1" alt="Bosch" height="32"
+            /></a>
+            <a href="https://www.hilti.hr/"
+              ><img src="logo/hilti.png" alt="Hilti" height="24" width="115"
+            /></a>
+            <a href="https://www.alatimilic.hr/shop/fein-alati-i-pribor"
+              ><img src="logo/fein-logo.svg" alt="Fein" height="26"
+            /></a>
+          </div>
+          <div class="brand-logos-2">
+            <a
+              href="https://unikomerc-uvoz.hr/motorne-pile?gad_campaignid=19723983990"
+              ><img src="logo/stihl-logo.png" alt="Stihl" height="25"
+            /></a>
+            <a href="https://www.knipex.com/hr-hr"
+              ><img src="logo/knipex-logo1.png" alt="Knipex" height="35"
+            /></a>
+            <a href="https://www.husqvarna.com/hr/"
+              ><img src="logo/husq-logo.PNG" alt="Husqvarna" height="32"
+            /></a>
+            <a href="https://www.makita.hr/"
+              ><img src="logo/makita_logo3.png" alt="Makita" height="32"
+            /></a>
+          </div>
+          <p>
+            Naravno, ne tvrdim da na svijetu nema boljih alata. Ovdje navodim
+            samo alate s kojima sam ja radio i imao dobra iskustva.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/time-script.js"></script>
+  </body>
+</html>

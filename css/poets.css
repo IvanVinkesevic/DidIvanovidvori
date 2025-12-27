@@ -1,0 +1,264 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Segoe+UI:wght@400;500;600&display=swap");
+
+:root {
+  --color-1: #a66d18;
+  --color-2: #e2dfd9;
+  --color-3: #c5a16b;
+  --color-4: #f7f1f1;
+  --color-5: #755d38;
+  --color-6: #333;
+  --font-h: "Caveat", sans-serif;
+  --font-t: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("../grafike/irs-logo2.png") no-repeat top 50% right 1%,
+    url("../grafike/kucica.png") no-repeat top 10px left,
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 15%,
+      rgba(197, 135, 42, 0.55) 30%,
+      rgba(75, 52, 18, 0.65) 60%,
+      rgba(0, 0, 0, 1) 90%
+    ),
+    url("../grafike/cigle.png") no-repeat center center;
+
+  background-size: 5.5rem 2.4rem, 9rem 6rem, auto, cover;
+  color: var(--color-2);
+  border: 3px solid var(--color-1);
+}
+
+header h1 {
+  font-family: var(--font-h);
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
+  font-style: italic;
+  margin: 0;
+}
+main h1 {
+  font-family: var(--font-h);
+  font-size: clamp(2.4rem, 3vw, 3.2rem);
+}
+/* NAV */
+.navigacija {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 0.4rem;
+}
+.navigacija a {
+  font-size: 1.4rem;
+  font-family: var(--font-h);
+  text-decoration: none;
+  color: #eee8e8;
+  padding: 2px 8px;
+  border-radius: 0.6rem;
+  box-shadow: 8px 3px 5px 3px rgba(156, 128, 88, 0.7);
+}
+.navigacija a:hover {
+  background: var(--color-3);
+}
+.povratak-nav {
+  background-color: #ddd8d8;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-shadow: 0 0 0 2px blue, 0 0 0 4px white, 0 0 0 6px red;
+}
+.p-btn-1,
+.p-btn-2 {
+  display: inline-block;
+  flex: 0 0 140px;
+  padding: 3px 3px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  text-decoration: none;
+  margin: 3px 1px;
+}
+.p-btn-1:hover,
+.p-btn-2:hover {
+  transform: scale(1.2);
+}
+.p-btn-1 {
+  background-color: white;
+  color: red;
+  opacity: 0.6;
+}
+.p-btn-2 {
+  background-color: red;
+  color: #ddd;
+  opacity: 0.6;
+}
+.pjesnik {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 20px 0;
+  background: #f9f9f9;
+  text-align: center;
+}
+#pjesnik9 {
+  text-align: left;
+  padding-left: 6rem;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  background-color: bisque;
+  box-shadow: inset 0 0 3px 5px #ddd;
+  border-radius: 10px;
+  padding: 0 2rem;
+  margin-bottom: 2rem;
+}
+.info h2 {
+  margin: 1rem auto;
+  font-size: clamp(1.8rem, 2.2vw, 2.2rem);
+}
+.info h3 {
+  margin: 0 auto;
+}
+.pjesnik-slika {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  float: left;
+  margin-right: 20px;
+  border: 2px solid rgb(133, 99, 99);
+  border-radius: 5px;
+}
+.pjesme {
+  margin-top: 3rem;
+}
+.pjesma {
+  font-weight: 600;
+  margin: 15px auto;
+  padding: 10px;
+  background: linear-gradient(rgba(255, 255, 255, 0.4));
+  border-bottom: 1px solid #9c8c8c;
+}
+.back-nav {
+  display: flex;
+  justify-content: center;
+}
+.back-nav a {
+  padding: 3px 6px;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #ddd;
+  box-shadow: 0 0 0 2px blue, 0 0 0 4px white, 0 0 0 6px red;
+}
+h4 {
+  margin: 0 auto;
+  font-size: 1.6rem;
+}
+.povratak-nav {
+  text-align: center;
+  margin: 20px 0;
+}
+.povratak-nav a {
+  text-decoration: none;
+  display: inline-block;
+}
+.footer-simple {
+  background: url("../grafike/irs-logo2.png") no-repeat top 50% left 1%,
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(197, 135, 42, 0.55) 25%,
+      rgba(59, 43, 18, 0.65) 60%,
+      rgba(0, 0, 0, 1) 90%
+    );
+
+  background-size: 5.5rem 2.4rem, cover;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  border-top: 3px solid var(--color-6);
+}
+
+.footer-simple a {
+  color: var(--color-2);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-simple a:hover {
+  text-decoration: underline;
+  color: var(--color-3);
+}
+
+@media (max-width: 898px) {
+  .p-btn-1,
+  .p-btn-2 {
+    background-color: white;
+    color: red;
+    opacity: 0.6;
+  }
+}
+@media (max-width: 748px) {
+  .info p {
+    display: none;
+  }
+  .info h3 {
+    padding-bottom: 2rem;
+  }
+  .pjesnik-slika {
+    width: 90px;
+    height: auto;
+  }
+}
+@media (max-width: 646px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .pjesnik {
+    width: 100%;
+    padding: 1rem;
+  }
+  .pjesma pre {
+    white-space: pre-wrap; /* Omogući wrap */
+    word-wrap: break-word;
+    max-width: 100%;
+  }
+  #pjesnik9 {
+    justify-content: start;
+    padding: 0;
+  }
+
+  header {
+    background: url("../grafike/kucica.png") no-repeat top 10px left,
+      linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 15%,
+        rgba(0, 0, 0, 0.8) 30%,
+        rgba(197, 135, 42, 0.55) 45%,
+        rgba(75, 52, 18, 0.75) 70%,
+        rgba(0, 0, 0, 1) 90%
+      );
+    background-size: 9rem 6rem, auto;
+  }
+  .navigacija {
+    gap: 0.2rem;
+  }
+}

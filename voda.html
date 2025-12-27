@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="ivan-vinkesevic" />
+    <link rel="stylesheet" href="css/galerija-style.css" />
+    <link rel="icon" type="image/ico" href="icons/favicon.ico" />
+    <title>Galerija 3</title>
+  </head>
+  <body>
+    <header>
+      <div class="naslov">
+        <h1>Galerija 3</h1>
+        <h2>Vodoinstalacije - od bunara do kupaone</h2>
+      </div>
+      <div id="navbar">
+        <nav class="navigacija">
+          <a href="index.html">Početna</a>
+          <a href="statika.html">Statika</a>
+          <a href="krov.html">Krovište</a>
+          <a href="kanalizacija.html">Odvod</a>
+          <a href="struja.html">Struja</a>
+          <a href="zidanje.html">Zidanje</a>
+          <a href="zbukanje.html">Žbukanje</a>
+          <a href="okolis.html">Okoliš</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="gallery">
+        <img src="voda/slika-1.jpg" data-full="voda/slika-1.jpg" />
+        <img src="voda/slika-2.jpg" data-full="voda/slika-2.jpg" />
+        <img src="voda/slika-3.jpg" data-full="voda/slika-3.jpg" />
+        <img src="voda/slika-4.jpg" data-full="voda/slika-4.jpg" />
+        <img src="voda/slika-5.jpg" data-full="voda/slika-5.jpg" />
+        <img src="voda/slika-6.jpg" data-full="voda/slika-6.jpg" />
+        <img src="voda/slika-7.jpg" data-full="voda/slika-7.jpg" />
+        <img src="voda/slika-8.jpg" data-full="voda/slika-8.jpg" />
+        <img src="voda/slika-9.jpg" data-full="voda/slika-9.jpg" />
+        <img src="voda/slika-10.jpg" data-full="voda/slika-10.jpg" />
+        <img src="voda/slika-11.jpg" data-full="voda/slika-11.jpg" />
+        <img src="voda/slika-12.jpg" data-full="voda/slika-12.jpg" />
+
+        <a class="back" href="#">Povratak na vrh</a>
+      </div>
+      <!-- Lightbox container -->
+      <div class="lightbox" id="lightbox">
+        <img id="lightbox-img" src="" />
+      </div>
+    </main>
+
+    <footer>
+      <div class="odjava">
+        <h5>Kontaktirajte autora:</h5>
+        <p>
+          WhatsApp:
+          <a href="tel:00385913900416">+385913900416</a> &nbsp;&nbsp;&nbsp;
+          <br />e-mail:
+          <a href="mailto:didivanovidvori@outlook.com? subject=Poruka"
+            >didivanovidvori@outlook.com
+          </a>
+        </p>
+      </div>
+      <div id="copyright">
+        &copy;2025 &nbsp;<img
+          class="ES"
+          src="logo/El-shockac-logo-2.png"
+          alt="ES"
+          width="20px"
+        />
+        Sva prava pridržana
+      </div>
+      <div class="right">
+        <img src="grafike/irs-logo2.png" alt="logo" />
+      </div>
+    </footer>
+    <script>
+      const lightbox = document.getElementById("lightbox");
+      const lightboxImg = document.getElementById("lightbox-img");
+
+      document.querySelectorAll(".gallery img").forEach((img) => {
+        img.addEventListener("click", () => {
+          lightboxImg.src = img.getAttribute("data-full");
+          lightbox.style.display = "flex";
+        });
+      });
+
+      lightbox.addEventListener("click", () => {
+        lightbox.style.display = "none";
+      });
+      lightbox.classList.add("show");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,440 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Segoe+UI:wght@400;500;600&display=swap");
+
+/* ===== VARIJABLE ===== */
+:root {
+  --color-1: #a66d18;
+  --color-2: #e2dfd9;
+  --color-3: #c5a16b;
+  --color-4: #f7f1f1;
+  --color-5: #755d38;
+  --color-6: #333;
+  --font-family-h: "Caveat", cursive;
+  --font-family-t: "Arial", "Segoe UI", Roboto, sans-serif;
+}
+
+/* ===== OSNOVNI STILOVI ===== */
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family-t);
+  background-color: #d6c1a0;
+}
+
+/* ===== HEADER ===== */
+header {
+  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  margin: 0 2px;
+  background: url("../grafike/kucica.png") no-repeat bottom left,
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 15%,
+      rgba(211, 143, 41, 0.75) 45%,
+      rgba(0, 0, 0, 0.8) 80%
+    ),
+    url(../grafike/cigle.png) no-repeat center center;
+  background-size: 13rem 9.5rem, auto, cover;
+  height: 10rem;
+  border: 3px solid #a57124;
+  justify-content: space-between;
+  color: var(--color-2);
+  z-index: 10;
+}
+
+/* Naslovna sekcija */
+.naslov {
+  display: flex;
+  flex-direction: column;
+  min-width: 50%;
+  flex: 0 0 auto;
+  align-items: center;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  margin: 0 auto;
+  font-family: var(--font-family-h);
+}
+
+.naslov h2 {
+  font-size: clamp(1.8rem, 2vw, 2rem);
+  margin: 0;
+  white-space: nowrap;
+  font-family: var(--font-family-t);
+}
+
+/* Desna sekcija (datum i kontakt) */
+.desno {
+  display: flex;
+  flex-direction: column;
+}
+
+.desno p {
+  text-align: right;
+  font-size: 1.6rem;
+  font-weight: 100;
+  color: var(--color-4);
+  padding: 0;
+  margin: 0 3rem;
+  font-family: var(--font-family-h); /* DODANO: Consistency */
+}
+
+#datetime {
+  font-size: 1.6rem;
+  color: var(--color-4);
+  font-family: var(--font-family-h); /* DODANO: Consistency */
+}
+
+/* Navigacija */
+.navigacija {
+  display: flex;
+  min-width: 50%;
+  justify-content: space-around;
+  margin: auto;
+  gap: 1rem;
+  padding-right: 2rem;
+}
+
+.navigacija a {
+  white-space: nowrap;
+  font-size: clamp(1.4rem, 2vw, 2rem);
+  font-family: var(--font-family-h);
+  color: var(--color-2);
+  text-decoration: none;
+  padding: 5px 15px;
+  font-weight: 300;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 5px 3px 5px 3px rgb(156, 128, 88);
+}
+
+.navigacija a:hover {
+  background-color: var(--color-3);
+  border: 1px solid var(--color-4);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  background: url(../logo/grb-rh.png) no-repeat center bottom 20%,
+    rgba(236, 219, 202, 0.9);
+  background-blend-mode: overlay;
+  background-size: 15rem, cover;
+  text-align: center;
+  margin: 10rem auto 0;
+  padding: 2rem 0;
+  max-width: 80%;
+}
+
+/* Naslovi */
+h3 {
+  font-family: var(--font-family-h);
+  font-size: 2.4rem;
+  font-weight: bold;
+  color: var(--color-2);
+  background-color: var(--color-6);
+  padding: 0.5rem 1rem;
+  margin-inline: 2rem;
+}
+
+.name {
+  font-family: "Sniglet", cursive;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+  margin: 2rem;
+  line-height: 1.3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.crveno {
+  color: #e74c3c;
+}
+
+.tamno-plavo {
+  color: #2c3e50;
+}
+
+p {
+  font-family: var(--font-family-t);
+  font-size: 1.8rem;
+  line-height: 1.3;
+  padding: 2rem 4rem;
+}
+
+/* ===== CONTAINER SEKCIJA ===== */
+.container {
+  display: flex;
+  font-family: var(--font-family-t);
+  font-size: 1.8rem; /* Konvertirano: 18px = 1.8rem */
+}
+
+.container ul {
+  list-style-type: none;
+}
+
+.container a {
+  color: black;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.container a:hover {
+  color: #e74c3c;
+  font-weight: 700;
+  text-shadow: 0px 0px 1px rgba(231, 76, 60, 0.3);
+}
+
+.zakon,
+.follow,
+.znanje {
+  width: 33%;
+  text-align: center;
+}
+
+/* Social Media - CENTRIRANJE I RESPONZIVNOST */
+.follow {
+  display: flex;
+  flex-direction: column;
+}
+
+.follow h5 {
+  display: block;
+  margin: auto auto 0.5rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-6);
+  border-radius: 5px;
+  animation: hrvatskeBoje 8s infinite alternate;
+  background: linear-gradient(
+    90deg,
+    rgba(180, 28, 28, 0.4),
+    rgba(255, 255, 255, 1),
+    rgba(80, 80, 235, 0.6)
+  );
+  background-size: 150% 150%;
+  transition: background 2s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: max-content;
+}
+
+@keyframes hrvatskeBoje {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.social-media img {
+  width: 32px;
+  margin: 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  display: flex;
+  position: relative;
+  height: 8rem;
+  margin: 0 3px;
+  border: 2px solid #a37520;
+  background-color: black;
+  background: url(../grafike/kucica.png) no-repeat bottom 0 left 0, black;
+  background-size: 10rem 6rem, cover;
+  color: #ffffff;
+  font-family: var(--font-family-h);
+}
+
+.odjava {
+  width: 33%;
+
+  font-size: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.odjava h5 {
+  margin: 0;
+  padding: 0;
+}
+
+.odjava p {
+  margin: 0;
+  padding: 0.5rem 0 0 0;
+  font-family: var(--font-family-t);
+  font-size: 1.2rem;
+}
+
+.odjava a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: var(--font-family-h);
+  font-size: 1.6rem;
+}
+
+.odjava a:hover {
+  color: #5cb840;
+  text-shadow: 0 0 2px #fff, 0 0 5px rgb(51, 168, 129);
+  transition: 0.3s;
+}
+
+#copyright {
+  flex-basis: 33%;
+  font-size: 1.4rem;
+  text-align: center;
+  padding: 3rem 0 0 6rem;
+}
+
+#copyright p {
+  font-size: 1.4rem;
+}
+
+.ES {
+  width: 2.5em;
+  vertical-align: middle;
+}
+
+.right {
+  width: 33%;
+  text-align: center;
+}
+
+.right img {
+  display: inline-block;
+  width: 120px;
+  margin-top: 1rem;
+}
+
+/* ===== RESPONZIVNOST ===== */
+@media (max-width: 868px) {
+  /* Header responzivnost */
+  header {
+    flex-direction: column;
+    height: auto;
+    align-items: center;
+  }
+
+  .naslov {
+    width: auto;
+    margin: 0;
+  }
+
+  .desno {
+    width: auto;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .desno p,
+  #datetime {
+    display: none;
+  }
+
+  .navigacija {
+    flex-basis: auto;
+    padding: 1rem 0; /* DODANO: vertikalni padding */
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navigacija a {
+    font-size: 1.6rem;
+    padding: 4px 10px;
+  }
+
+  /* Container responzivnost */
+  .container {
+    flex-direction: column;
+    margin-inline: auto;
+  }
+
+  .zakon,
+  .follow,
+  .znanje {
+    width: 100%;
+    margin-bottom: 2rem; /* DODANO: razmak između sekcija */
+  }
+
+  /* Social media centriranje na mob */
+  .social-media {
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  /* Footer responzivnost */
+  footer {
+    min-width: none;
+    height: auto;
+    flex-direction: column;
+    text-align: center;
+    border: none;
+  }
+
+  .odjava {
+    width: 100%;
+    order: 1;
+    padding: 1rem 0; /* DODANO: padding */
+  }
+
+  #copyright {
+    width: 100%;
+    order: 3;
+    padding: 1rem 0; /* PROMJENJENO: uklonjen padding-left */
+  }
+
+  .right {
+    width: 100%;
+    margin-bottom: 2rem;
+    order: 2;
+    padding: 1rem 0; /* DODANO: padding */
+  }
+}
+
+@media (max-width: 344px) {
+  .naslov h2 {
+    font-size: 1.8rem;
+  }
+
+  .navigacija {
+    padding: 0.5rem 0; /* DODANO: manji padding */
+    gap: 0.2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .navigacija a {
+    font-size: 1.4rem; /* DODANO: manji font na vrlo malim ekranima */
+    padding: 3px 8px;
+  }
+
+  /* Social media optimizacija za vrlo male ekrane */
+  .social-media {
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+
+  .social-media img {
+    width: 28px; /* DODANO: manje ikone na vrlo malim ekranima */
+  }
+}

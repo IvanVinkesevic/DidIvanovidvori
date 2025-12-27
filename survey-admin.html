@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kreiraj anketu</title>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+  </head>
+  <body>
+    <h1>Inicijativa za revitalizaciju hrvatskog sela</h1>
+
+    <form id="surveyForm">
+      <label>Naslov ankete:</label><br />
+      <input type="text" id="surveyTitle" required /><br /><br />
+
+      <label>Pitanje 1:</label><br />
+      <input type="text" class="question" required /><br /><br />
+
+      <label>Pitanje 2:</label><br />
+      <input type="text" class="question" required /><br /><br />
+
+      <label>Pitanje 3:</label><br />
+      <input type="text" class="question" required /><br /><br />
+
+      <label>Pitanje 4:</label><br />
+      <input type="text" class="question" required /><br /><br />
+
+      <label>Pitanje 5:</label><br />
+      <input type="text" class="question" required /><br /><br />
+
+      <label>Pitanje 6:</label><br />
+      <input type="text" class="question" required /><br /><br />
+
+      <label>Pitanje 7:</label><br />
+      <input type="text" class="question" required /><br /><br />
+
+      <label>Pitanje 8:</label><br />
+      <input type="text" class="question" required /><br /><br />
+
+      <label>Pitanje 9:</label><br />
+      <input type="text" class="question" required /><br /><br />
+
+      <label>Pitanje 10:</label><br />
+      <input type="text" class="question" required /><br /><br />
+
+      <button type="submit">Spremi anketu</button>
+    </form>
+
+    <script>
+      const firebaseConfig = {
+        projectId: "studio-4123987260-2ceeb",
+        appId: "1:1032474933263:web:1b57df0d47ae28debe0b7a",
+        apiKey: "AIzaSyC30FdtehvYgcwyo9pNw3sLU7GPLHyP7l0",
+        authDomain: "studio-4123987260-2ceeb.firebaseapp.com",
+      };
+
+      const app = firebase.initializeApp(firebaseConfig);
+      const db = firebase.firestore();
+
+      document
+        .getElementById("surveyForm")
+        .addEventListener("submit", async (e) => {
+          e.preventDefault();
+          const title = document.getElementById("surveyTitle").value;
+          const questions = Array.from(
+            document.querySelectorAll(".question")
+          ).map((q) => q.value);
+
+          try {
+            await db.collection("surveys").add({
+              title,
+              questions,
+              createdAt: firebase.firestore.FieldValue.serverTimestamp(),
+            });
+            alert("Anketa je uspješno spremljena!");
+            e.target.reset();
+          } catch (err) {
+            console.error("Greška:", err);
+            alert("Došlo je do greške pri spremanju ankete.");
+          }
+        });
+    </script>
+  </body>
+</html>

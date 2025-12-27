@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Chewy&display=swap");
+
+:root {
+  --color-1: #a66d18;
+  --color-2: #e2dfd9;
+  --color-3: #c5a16b;
+  --color-4: #f7f1f1;
+  --color-5: #755d38;
+  --color-6: #333;
+  --font-h: "Caveat", sans-serif;
+  --font-t: Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: var(--font-t);
+  background: var(--color-2);
+  color: var(--color-6);
+  line-height: 1.4;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: flex-start;
+  padding: 1rem 0;
+  background: url("../grafike/kucica.png") no-repeat top 5px left,
+    linear-gradient(
+      to right,
+      rgba(0, 0, 0, 1) 15%,
+      rgba(0, 0, 0, 0.8) 30%,
+      rgba(197, 135, 42, 0.55) 45%,
+      rgba(75, 52, 18, 0.75) 70%,
+      rgba(0, 0, 0, 1) 90%
+    ),
+    url("../grafike/cigle.png") no-repeat center center;
+  background-size: 15rem 12rem, auto, cover;
+  color: var(--color-2);
+  z-index: 10;
+  border: 3px solid var(--color-1);
+}
+.title {
+  flex: 1;
+  min-width: 50%;
+  text-align: center;
+}
+.title h1 {
+  font-family: var(--font-h);
+  font-size: clamp(3.5rem, 5vw, 5rem);
+  font-weight: 900;
+  padding-left: 2rem;
+}
+.title p {
+  font-family: var(--font-h);
+  font-style: italic;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  padding-left: 2rem;
+}
+
+.desno {
+  display: flex;
+  position: relative;
+  max-width: 50%;
+  padding-right: 2rem;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2rem;
+}
+.desno p {
+  font-family: var(--font-h);
+  font-size: 14px;
+  padding-right: 2rem;
+}
+/* NAV */
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  margin-right: 2.2rem;
+}
+.nav a {
+  font-size: 1.8rem;
+  font-family: var(--font-h);
+  color: var(--color-2);
+  text-decoration: none;
+  padding: 0.4rem 1.2rem;
+  border-radius: 0.6rem;
+  box-shadow: 5px 3px 5px 3px rgba(156, 128, 88, 0.7);
+}
+.nav a:hover {
+  background: var(--color-3);
+}
+/* Popup prozorčić */
+#popup-auto {
+  position: absolute;
+  top: 110%;
+  right: -10%;
+  font-size: 1.6rem;
+  color: red;
+  font-weight: bold;
+  transform: translateX(-50%);
+  background: #fff8dc;
+  padding: 15px 20px;
+  border: 2px solid #333;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: none;
+  z-index: 1000;
+}
+#popup-auto.active {
+  display: block;
+}
+/* Strelica prema gumbu */
+#popup-auto::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 15px 15px;
+  border-style: solid;
+  border-color: transparent transparent #fff8dc transparent;
+}
+
+/* MAIN LAYOUT */
+.donacije-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  flex: 1;
+  position: relative;
+  padding: 1rem 0;
+  margin-top: 12rem;
+  text-align: center;
+}
+
+/* ============================= */
+/* STRANICA: DONACIJE */
+/* ============================= */
+
+.donacije-main h2 {
+  margin: 1rem auto;
+  color: var(--color-2);
+  font-size: 2.4rem;
+  font-family: var(--font-h);
+  color: var(--color-6);
+}
+
+.donacije-main p {
+  max-width: 700px;
+  font-size: 1.4rem;
+  font-style: italic;
+  margin: 0 auto 2rem auto;
+  line-height: 1.6;
+}
+
+.donacije-options {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+.donacije-options p {
+  font-size: 1.4rem;
+}
+.donacija-blok {
+  background-color: #f9f9f9;
+  border: 2px solid var(--color-3);
+  border-radius: 15px;
+  padding: 1.5rem;
+  width: 320px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.donacija-blok h3 {
+  color: var(--color-1);
+  margin-bottom: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.qr {
+  margin: 1rem 0;
+  width: 150px;
+  height: 150px;
+}
+
+.iban-box {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.doniraj-btn {
+  display: inline-block;
+  background: #0056d6;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.doniraj-btn:hover {
+  background: #003fa3;
+}
+
+@media (max-width: 768px) {
+  .donacije-options {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.donacija-forma {
+  font-size: 1.2rem;
+
+  padding: 1rem;
+  background: #f8f8f8;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.general {
+  width: 30%;
+}
+
+.specific {
+  width: 40%;
+}
+
+.donacija-forma h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.donacija-forma form {
+  display: flex;
+  flex-direction: column;
+}
+.donacija-forma label {
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.donacija-forma input,
+.donacija-forma select,
+.donacija-forma textarea {
+  padding: 0.6rem 2rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 0.7rem;
+}
+.donacija-forma textarea {
+  width: 60%;
+}
+.donacija-forma button {
+  align-self: center;
+  padding: 0.8rem 2rem;
+  background: #2d6a4f;
+  color: white;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.donacija-forma button:hover {
+  background: #75bd9f;
+  border: 1px solid #182e25;
+}
+.form-gumb {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/******Društvene mreže******/
+.follow {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.social-media {
+  display: flex;
+  max-width: 400px;
+  margin: 0 auto;
+  justify-content: space-around;
+  padding: 1.5rem;
+  background-color: var(--color-4);
+  border: 1px solid var(--color-6);
+  border-radius: 5px;
+  animation: hrvatskeBoje 8s infinite alternate;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 0.4),
+    rgba(255, 255, 255, 1),
+    rgba(80, 80, 235, 0.6)
+  );
+  background-size: 200% 200%;
+  transition: background 2s ease;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+@keyframes hrvatskeBoje {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.social-media img {
+  width: 32px;
+}
+.social-media a {
+  text-decoration: none;
+  color: var(--color-6);
+  font-size: 1.4rem;
+}
+h5 {
+  font-size: 2rem;
+  font-family: var(--font-h);
+  font-weight: 600;
+  text-align: center;
+  margin: 2rem auto 1rem;
+}
+
+/* ============================= */
+/* FOOTER ZA PODSTRANICE */
+/* ============================= */
+.footer-simple {
+  margin-top: auto;
+  background-color: var(--color-5);
+  color: var(--color-4);
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 1.2rem;
+  border-top: 3px solid var(--color-6);
+}
+
+.footer-simple img {
+  width: 5rem;
+  vertical-align: middle;
+}
+.footer-simple p {
+  color: var(--color-2);
+  font-family: Caveat;
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .title {
+    min-width: 100%;
+    padding-left: 0;
+  }
+
+  .title h1,
+  .title p {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .desno {
+    max-width: 100%;
+    padding-right: 0;
+    align-items: center; /* PROMJENA: flex-end → center */
+    gap: 1rem;
+  }
+
+  .desno p {
+    padding-right: 0;
+    text-align: center;
+  }
+
+  .nav {
+    margin-right: 0;
+    gap: 0.2rem;
+    justify-content: center;
+    width: 100%;
+  }
+
+  /* Popup za mobile */
+  #popup-auto {
+    right: 48%;
+    transform: translateX(50%); /* Centriranje */
+  }
+
+  #popup-auto::after {
+    left: 50%; /* Strelica centrirana */
+  }
+}
+@media (max-width: 432px) {
+  .desno p {
+    display: none;
+  }
+  .donacije-main {
+    margin-top: 14rem;
+  }
+}
