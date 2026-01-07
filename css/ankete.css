@@ -30,7 +30,7 @@ header {
   display: flex;
   align-items: center;
   background: url("../grafike/kucica.png") no-repeat top 5px left,
-    url("../grafike/irs-logo2.png") no-repeat top 50% right 0,
+    url("../grafike/irs_logo.svg") no-repeat top 50% right 2%,
     linear-gradient(
       to right,
       rgba(0, 0, 0, 1) 15%,
@@ -79,7 +79,8 @@ h1 b {
   align-self: flex-end;
 }
 header a.nova-anketa {
-  background: #6c8684;
+  background: #3c473b;
+  box-shadow: 5px 3px 5px 3px rgba(156, 128, 88, 0.7);
   color: white;
   text-decoration: none;
   font-family: Caveat;
@@ -87,7 +88,7 @@ header a.nova-anketa {
   font-weight: 600;
   padding: 4px 12px;
   height: fit-content;
-  border-radius: 6px;
+  border-radius: 8px;
   transition: background 0.3s;
 }
 
@@ -102,7 +103,7 @@ header a.nova-anketa:hover {
 
 @keyframes blinkText {
   0% {
-    opacity: 0.5;
+    opacity: 0.6;
     transform: scale(1);
   }
 
@@ -215,14 +216,21 @@ section.rezultati {
 }
 .footer-simple {
   margin-top: auto;
-  background-color: var(--color-5);
   color: var(--color-4);
   text-align: center;
   padding: 15px 10px;
   font-size: 1.2rem;
   border-top: 3px solid var(--color-6);
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 10%,
+    rgba(0, 0, 0, 0.6) 20%,
+    rgba(133, 87, 18, 0.55) 25%,
+    rgba(0, 0, 0, 0.8) 40%,
+    rgba(197, 135, 42, 0.65) 65%,
+    rgba(75, 52, 18, 0.75) 90%
+  );
 }
-
 .footer-simple img {
   width: 5rem;
   vertical-align: middle;

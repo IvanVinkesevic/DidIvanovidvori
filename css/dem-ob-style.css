@@ -33,7 +33,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background: url(../grafike/kucica.png) no-repeat left 0 bottom 20%,
-    url(../grafike/irs-logo2.png) no-repeat right 1% bottom 50%,
+    url(../grafike/irs_logo.png) no-repeat right 1% bottom 50%,
     linear-gradient(135deg, #141414, #cc7745, #141414);
   background-size: 7rem, 4rem, cover;
   padding: 0.8rem 1.5rem;

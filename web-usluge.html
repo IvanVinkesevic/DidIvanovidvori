@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/web-usluge.css" />
+    <link rel="icon" type="image/x-icon" href="grafike/favicon.ico" />
+    <title>Web wu</title>
+    <meta
+      name="description"
+      content="Izrada web stranica i aplikacija za udruge, OPG-ove i ruralne zajednice. Frontend developer specijaliziran za potrebe hrvatskog sela."
+    />
+  </head>
+  <body>
+    <header>
+      <div class="naslov">
+        <h1>Did Ivanovi dvori</h1>
+        <h2>Digitalno povezivanje hrvatskog sela</h2>
+      </div>
+      <div class="desno">
+        <p>Danas je <span id="datetime"></span></p>
+        <nav class="navigacija">
+          <a href="index.html">Početna</a>
+          <a href="projekti.html">Projekti</a>
+          <a href="donacije.html">Donacije</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="wu-container">
+      <!-- HERO SEKCIJA -->
+      <section class="wu-hero">
+        <h1><span>Online</span> prisutnost hrvatskog sela</h1>
+        <p>
+          Kreiramo modernu online prisutnost za vašu udrugu, obrt, OPG ili
+          ruralni projekt
+        </p>
+        <p>
+          <em
+            >"Svoju kreativnost, znanje i strast stavljamo na raspolaganje vašoj
+            ideji"</em
+          >
+        </p>
+      </section>
+
+      <!-- MOJE PREDNOSTI (kao bullet points) -->
+      <section class="prednosti">
+        <h2>Zašto raditi s nama?</h2>
+        <div class="prednosti-grid">
+          <div class="prednost">
+            <h3>🎯 Razumijemo vaše potrebe</h3>
+            <p>
+              I sam sam osnivač udruge za revitalizaciju sela. Znam iz prve ruke
+              što vam treba.
+            </p>
+          </div>
+          <div class="prednost">
+            <h3>⚡ Responzivne stranice</h3>
+            <p>
+              Optimizirano za sve uređaje. Brzo učitavanje = više posjetitelja.
+            </p>
+          </div>
+          <div class="prednost">
+            <h3>💰 Isplativo za udruge</h3>
+            <p>Posebne cijene za neprofitne organizacije i ruralne projekte.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- wu - 3 KARTICE -->
+      <section class="paketi">
+        <h2>Što nudimo?</h2>
+
+        <div class="paket-kartica">
+          <h3>🌱 Osnovni paket</h3>
+          <p class="cijena">Od 500€</p>
+          <ul>
+            <li>Do 5 statičkih stranica (HTML/CSS/JS)</li>
+            <li>Potpuno responzivan dizajn</li>
+            <li>Optimizacija za Google</li>
+            <li>Kontakt forma i Maps</li>
+            <li>Galerija slika</li>
+            <li>Osnovno održavanje (1 mjesec)</li>
+          </ul>
+          <p class="za-koga">Idealno za: Udruge, obrte, OPG-ove</p>
+        </div>
+
+        <div class="paket-kartica">
+          <h3>🚜 Napredni paket</h3>
+          <p class="cijena">Od 1500€</p>
+          <ul>
+            <li>Sve iz Osnovnog paketa +</li>
+            <li>React aplikacija (poput OPG platforme)</li>
+            <li>Upravljanje sadržajem (CMS)</li>
+            <li>Korisnički računi/prijave</li>
+            <li>API integracije</li>
+            <li>3 mjeseca održavanja</li>
+          </ul>
+          <p class="za-koga">Idealno za: Platforme, zajednice, veće OPG-ove</p>
+        </div>
+
+        <div class="paket-kartica">
+          <h3>🔧 Održavanje i nadogradnje</h3>
+          <p class="cijena">Od 50€/mjesečno</p>
+          <ul>
+            <li>Redovno ažuriranje sadržaja</li>
+            <li>Sigurnosne zakrpe</li>
+            <li>Backup baze podataka</li>
+            <li>Tehnička podrška</li>
+            <li>Manje izmjene i dopune</li>
+          </ul>
+          <p class="za-koga">Idealno za: Postojeće stranice</p>
+        </div>
+      </section>
+
+      <!-- PORTOFOLIO (linkovi na postojeće projekte) -->
+      <section class="portfolio">
+        <h2>Reference</h2>
+        <p>Pogledajte što smo do sada napravili:</p>
+
+        <div class="portfolio-item">
+          <h3>Did Ivanovi dvori</h3>
+          <p>
+            Stranica na kojoj se nalazite - kompleksna HTML/CSS struktura s 27
+            stranica, interaktivnim elementima i dvije React aplikacije.
+          </p>
+        </div>
+
+        <div class="portfolio-item">
+          <h3>OPG Platforma</h3>
+          <p>React aplikacija za povezivanje lokalnih proizvođača s kupcima.</p>
+          <a href="http://opg-react-app.vercel.app" target="_blank"
+            >Pogledajte aplikaciju →</a
+          >
+        </div>
+
+        <div class="portfolio-item">
+          <h3>Nekretnine na selu</h3>
+          <p>
+            React aplikacija za pregled dostupnih nekretnina u ruralnim
+            područjima.
+          </p>
+          <a href="https://nekretnine-app.vercel.app" target="_blank"
+            >Pogledajte aplikaciju →</a
+          >
+        </div>
+      </section>
+
+      <!-- KONTAKT CTA -->
+      <section class="kontakt-cta">
+        <h2>Besplatne konzultacije</h2>
+        <p>
+          Javite se za besplatnu 30-minutnu analizu vaših potreba. Bez obaveza.
+        </p>
+
+        <div class="kontakt-info">
+          <p>
+            📧
+            <a
+              href="mailto:didivanovidvori@outlook.com?subject=Upit za web dizajn"
+              >didivanovidvori@outlook.com</a
+            >
+          </p>
+          <p>📞 <a href="tel:+385913900416">+385 91 3900 416</a></p>
+          <p>📍 Zagreb / online</p>
+        </div>
+
+        <form
+          class="upit-forma"
+          action="https://formspree.io/f/xnnlaojj"
+          method="POST"
+        >
+          <input type="hidden" name="_subject" value="Novi upit za web wu" />
+
+          <input type="text" name="ime" placeholder="Vaše ime" required />
+          <input type="email" name="email" placeholder="Vaš email" required />
+          <textarea
+            name="poruka"
+            rows="4"
+            placeholder="Opišite svoj projekt..."
+            required
+          ></textarea>
+
+          <button type="submit">Pošaljite upit</button>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <div class="odjava">
+        <h5>Kontaktirajte autora:</h5>
+        <p>
+          WhatsApp:
+          <a href="tel:00385913900416">+385913900416</a> &nbsp;&nbsp;&nbsp;
+          <br />e-mail:
+          <a href="mailto:didivanovidvori@outlook.com? subject=Poruka"
+            >didivanovidvori@outlook.com
+          </a>
+        </p>
+      </div>
+      <div id="copyright">
+        &copy;2025 &nbsp;<img
+          class="ES"
+          src="logo/El-shockac-logo-2.png"
+          alt="ES"
+          width="20px"
+        />
+        Sva prava pridržana
+      </div>
+      <div class="right">
+        <img src="grafike/irs_logo.svg" alt="logo" />
+      </div>
+    </footer>
+    <script src="js/time-script.js"></script>
+  </body>
+</html>

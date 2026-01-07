@@ -30,20 +30,10 @@ header {
 .logo-container {
   margin-bottom: 20px;
 }
-
-.logo-placeholder {
+.logo-container img {
   width: 150px;
-  height: 150px;
-  background: rgba(255, 255, 255, 0.1);
-  border: 3px dashed rgba(255, 255, 255, 0.3);
-  border-radius: 50%;
-  margin: 0 auto 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-style: italic;
+  height: auto;
 }
-
 h1 {
   font-size: 2.5em;
   margin-bottom: 10px;
@@ -259,5 +249,54 @@ footer {
     font-size: 0.65em;
     padding: 5px 3px;
     border-radius: 10px;
+  }
+}
+/* PRINT STILOVI - sakrivamo nepotrebno za papir */
+@media print {
+  /* Sakrij navigaciju i download gumb */
+  nav,
+  .download-btn,
+  .back-to-top {
+    display: none !important;
+  }
+
+  /* Sakrij i footer tekst (ili ostavi samo osnovne podatke) */
+  footer h3,
+  footer p:first-of-type {
+    display: none;
+  }
+
+  /* Poboljšaj izgled za print */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+  }
+
+  /* Osiguraj da se članci ne cijepaju preko stranica */
+  .clanak {
+    page-break-inside: avoid;
+  }
+
+  /* Povećaj naslove za bolju čitljivost */
+  h1,
+  h2,
+  h3 {
+    color: black !important;
+  }
+
+  /* Ukloni pozadinske boje ako postoje */
+  header,
+  footer,
+  .clanak {
+    background-color: white !important;
+    border: none !important;
+  }
+
+  /* Linkovi kao običan tekst (jer na papiru ne funkcioniraju) */
+  a {
+    color: black !important;
+    text-decoration: none !important;
   }
 }

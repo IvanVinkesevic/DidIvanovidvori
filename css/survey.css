@@ -20,7 +20,7 @@ header {
   width: 100%;
   margin: 0 auto;
   background: url("../grafike/kucica.png") no-repeat bottom left,
-    url("../grafike/irs-logo2.png") no-repeat bottom 10% right,
+    url("../grafike/irs_logo.svg") no-repeat bottom 10% right 2%,
     linear-gradient(
       to right,
       rgba(0, 0, 0, 1) 15%,
@@ -37,7 +37,6 @@ header {
 .name {
   font-family: "Sniglet", cursive;
   font-weight: 600;
-  font-size: 1.6rem;
   text-align: center;
   margin: 0;
   padding: 0;
@@ -53,15 +52,15 @@ header {
 
 .tamno-plavo {
   font-size: clamp(1.2rem, 1.6vw, 1.8rem);
-  color: #a6c6e9;
+  color: #74ace7;
 }
 
 header p {
   font-family: "Caveat", system-ui;
   font-weight: 400;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: right;
-  padding-right: 2rem;
+  padding: 0.3rem 2rem;
   margin: 0;
 }
 #datetime {
