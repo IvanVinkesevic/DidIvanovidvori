@@ -641,7 +641,11 @@ footer {
     width: 95%;
     font-size: 1.6rem;
   }
-
+  .archive-modal {
+    padding: 10px !important;
+    max-width: 90%;
+    max-height: 90% !important;
+  }
   aside {
     width: 95%;
     flex-direction: column;
@@ -752,7 +756,8 @@ footer {
   background: white;
   padding: 30px;
   border-radius: 15px;
-  max-width: 80%;
+  width: 90%;
+  max-width: 800px;
   max-height: 80%;
   overflow-y: auto;
   z-index: 10001;
@@ -807,8 +812,8 @@ footer {
 /* Responsive za mobile */
 @media (max-width: 768px) {
   .post-modal {
-    max-width: 95%;
-    max-height: 90%;
+    max-width: 80%;
+    max-height: 80%;
     padding: 20px;
   }
 
@@ -883,5 +888,60 @@ footer {
     font-size: 1.6rem !important;
     line-height: 1.7 !important;
     margin-bottom: 2rem !important;
+  }
+}
+/* =========================================== */
+/* FIX ZA CENTRIRANJE MODALA NA MOBITELIMA */
+/* =========================================== */
+
+@media (max-width: 768px) {
+  .post-modal {
+    /* RESETIRAJ SVE MARGINE I PADDINGE */
+    margin: 0 !important;
+    padding: 20px 15px !important;
+
+    /* OSIGURAJ CENTRIRANJE */
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+
+    /* ŠIRINA BEZ IZNIMKI */
+    width: calc(100% - 20px) !important;
+    max-width: calc(100% - 20px) !important;
+
+    /* RESET BOX-SIZING */
+    box-sizing: border-box !important;
+  }
+
+  /* RESETIRAJ OVERLAY */
+  .modal-overlay {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .post-modal {
+    width: 90vw !important;
+    max-width: 90vw !important;
+    margin: 0 !important;
+    padding: 15px 10px !important;
+    border-radius: 0 !important;
+    left: 0 !important;
+    top: 50% !important;
+    transform: translate(0, -50%) !important;
+  }
+
+  /* ALTERNATIVA: Centrirano ali puna širina */
+  .post-modal.centered-mobile {
+    left: 0 !important;
+    right: 0 !important;
+    margin: 0 auto !important;
+    width: 90% !important;
   }
 }

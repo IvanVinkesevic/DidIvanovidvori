@@ -25,7 +25,7 @@ async function loadBlogPosts() {
 
     const snapshot = await db
       .collection("blog_posts")
-      .orderBy("datum", "desc")
+      .orderBy("timestamp", "desc")
       .limit(2)
       .get();
 
@@ -48,7 +48,7 @@ async function loadAllBlogPosts() {
   try {
     const snapshot = await db
       .collection("blog_posts")
-      .orderBy("datum", "desc")
+      .orderBy("timestamp", "desc")
       .get();
 
     const posts = [];

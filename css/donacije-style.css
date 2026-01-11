@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Chewy&display=swap");
-/* @import url("https://fonts.googleapis.com/css2?family=Sniglet:wght@600&display=swap"); */
 
 :root {
   --color-1: #a66d18;
@@ -43,18 +42,18 @@ header {
   display: flex;
   align-items: flex-start;
   padding: 1rem 0;
-  background: url("../grafike/kucica.png") no-repeat top 5px left,
+  background: url("../grafike/kucica.png") no-repeat bottom left,
     linear-gradient(
       to right,
 
-      /* margin: 1rem; */ rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 1) 10%,
       rgba(0, 0, 0, 0.6) 20%,
-      rgba(197, 135, 42, 0.55) 35%,
-      rgba(153, 95, 9, 0.75) 70%,
+      rgba(158, 107, 31, 0.75) 35%,
+      rgba(148, 98, 24, 0.75) 70%,
       rgba(0, 0, 0, 1) 90%
     ),
     url("../grafike/cigle.png") no-repeat center center;
-  background-size: 15rem 12rem, auto, cover;
+  background-size: 15rem 10rem, auto, cover;
   color: var(--color-2);
   z-index: 10;
   border: 3px solid var(--color-1);
@@ -93,8 +92,8 @@ header {
 
 .desno p {
   font-family: var(--font-h);
-  font-size: 1.5rem;
-  padding-right: 2rem;
+  font-size: 1.6rem;
+  padding-right: 2.5rem;
 }
 
 /* NAV */
@@ -159,7 +158,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 2rem;
+  gap: 1rem;
   flex: 1;
   position: relative;
   padding: 1rem 0;
@@ -171,30 +170,49 @@ header {
 /* STRANICA: DONACIJE */
 /* ============================= */
 
-.donacije-main h2 {
+.smooth-animate {
   margin: 2rem auto 0;
-  color: var(--color-2);
   font-size: 3rem;
   font-weight: 600;
-  font-family: var(--font-h);
+  font-family: var(--font-t);
   color: var(--color-6);
 }
+.smooth-animate {
+  color: #000000;
+  display: inline-block;
+  animation: pulseColor 2s ease-in-out infinite alternate;
+}
 
+@keyframes pulseColor {
+  0% {
+    color: var(--color-6);
+    transform: scale(1);
+  }
+  100% {
+    color: #ff0000;
+    transform: scale(1.1);
+  }
+}
+.name {
+  margin: 0 auto;
+}
 .crveno {
   color: #e74c3c;
-  font-size: clamp(1.2rem, 1.6vw, 2.4rem);
+  font-size: clamp(1.8rem, 2.4vw, 2.6rem);
+  font-weight: 600;
 }
 
 .tamno-plavo {
-  color: #5c6497;
-  font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+  color: #858ecc;
+  font-size: clamp(1.8rem, 2.4vw, 2.6rem);
+  font-weight: 600;
 }
 
 .donacije-main p {
   max-width: 700px;
   font-size: 1.4rem;
   font-style: italic;
-  margin: 0 auto 2rem auto;
+  margin: 1rem auto;
   line-height: 1.6;
 }
 
@@ -383,7 +401,15 @@ h5 {
 /* ============================= */
 .footer-simple {
   margin-top: auto;
-  background-color: var(--color-5);
+  background: linear-gradient(
+    to right,
+
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 0.6) 35%,
+    rgba(158, 107, 31, 0.75) 65%,
+    rgba(148, 98, 24, 0.75) 80%,
+    rgba(0, 0, 0, 1) 90%
+  );
   color: var(--color-4);
   text-align: center;
   padding: 15px 10px;
@@ -464,7 +490,21 @@ h5 {
   .desno p {
     display: none;
   }
+  .name {
+    padding: 0;
+  }
+  header {
+    background: linear-gradient(
+        to right,
 
+        rgba(0, 0, 0, 1) 10%,
+        rgba(0, 0, 0, 0.5) 25%,
+        rgba(158, 107, 31, 0.75) 35%,
+        rgba(0, 0, 0, 1) 90%
+      ),
+      url("../grafike/cigle.png") no-repeat center center;
+    background-size: auto, cover;
+  }
   .donacije-main {
     margin-top: 14rem;
   }

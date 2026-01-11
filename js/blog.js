@@ -3,6 +3,18 @@ console.log("blog.js se učitava - DOM je već spreman!");
 const section = document.getElementById("osvrti");
 console.log("Section element:", section);
 
+function formatDate(dateField) {
+  if (!dateField) return "";
+
+  // Ako je timestamp objekt
+  if (dateField.toDate) {
+    return dateField.toDate().toLocaleDateString("hr-HR");
+  }
+
+  // Ako je već string
+  return dateField;
+}
+
 function formatText(text) {
   if (!text) return "";
 
@@ -42,7 +54,7 @@ function displayPosts(posts) {
 
     article.innerHTML = `
       <h2>${osvrt.naslov}</h2>
-      <small>${osvrt.datum}</small>
+      <small>${formatDate(osvrt.datum || osvrt.timestamp)}</small>
       <div class="blog-text">${formatText(osvrt.tekst)}</div>
       
       <div class="reaction-buttons">
